@@ -216,10 +216,26 @@
     "tags": ["scraping", "crawler", "python"]
   },
   {
-    "id": "obra",
-    "name": "obra (Jesse Vincent)",
-    "url": "https://github.com/obra",
-    "description": "GitHub profile for Jesse Vincent — Superpowers and other agentic coding tools.",
+    "id": "superpowers",
+    "name": "Superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "Agentic skills framework and software development methodology that works.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "skills", "methodology"]
+  },
+  {
+    "id": "andrej-karpathy-skills",
+    "name": "Andrej Karpathy Skills",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "description": "A CLAUDE.md that improves Claude Code behavior, based on Karpathy's LLM coding pitfalls.",
+    "category": "Developers",
+    "tags": ["ai", "claude", "skills", "prompting"]
+  },
+  {
+    "id": "forrestchang",
+    "name": "forrestchang (Jiayuan Zhang)",
+    "url": "https://github.com/forrestchang",
+    "description": "GitHub profile for Jiayuan Zhang — Multica AI and agent/tooling projects.",
     "category": "Developers",
     "tags": ["ai", "agents", "tools", "github"]
   },
