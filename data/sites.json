@@ -256,6 +256,14 @@
     "tags": ["typography", "fonts", "web"]
   },
   {
+    "id": "atlas-design",
+    "name": "Atlas AI Studio",
+    "url": "https://atlas.design/",
+    "description": "Governed AI creative workflows for games, CGI, and 3D production across many models.",
+    "category": "Design",
+    "tags": ["ai", "3d", "games", "workflows"]
+  },
+  {
     "id": "have-i-been-pwned",
     "name": "Have I Been Pwned",
     "url": "https://haveibeenpwned.com/",
