@@ -240,6 +240,30 @@
     "tags": ["ai", "agents", "tools", "github"]
   },
   {
+    "id": "agricidaniel",
+    "name": "AgriciDaniel",
+    "url": "https://github.com/AgriciDaniel",
+    "description": "GitHub profile for Agrici.Daniel — open-source Claude and Codex skills for SEO, ads, and content.",
+    "category": "Developers",
+    "tags": ["ai", "marketing", "seo", "skills"]
+  },
+  {
+    "id": "ai-engineering-from-scratch",
+    "name": "AI Engineering from Scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "description": "Learn it, build it, ship it — a hands-on path into AI engineering.",
+    "category": "Developers",
+    "tags": ["ai", "learning", "engineering"]
+  },
+  {
+    "id": "agentmemory",
+    "name": "AgentMemory",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "description": "Persistent memory for AI coding agents, based on real-world benchmarks.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "memory"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
