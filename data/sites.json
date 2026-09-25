@@ -1,0 +1,386 @@
+[
+  {
+    "id": "wikipedia",
+    "name": "Wikipedia",
+    "url": "https://www.wikipedia.org/",
+    "description": "Free encyclopedia anyone can edit — a starting point for almost any topic.",
+    "category": "Reference",
+    "tags": ["encyclopedia", "research", "knowledge"]
+  },
+  {
+    "id": "wiktionary",
+    "name": "Wiktionary",
+    "url": "https://www.wiktionary.org/",
+    "description": "Open dictionary and thesaurus with etymologies across many languages.",
+    "category": "Reference",
+    "tags": ["dictionary", "language", "words"]
+  },
+  {
+    "id": "internet-archive",
+    "name": "Internet Archive",
+    "url": "https://archive.org/",
+    "description": "Digital library of books, audio, video, software, and archived web pages.",
+    "category": "Reference",
+    "tags": ["archive", "books", "media"]
+  },
+  {
+    "id": "wayback-machine",
+    "name": "Wayback Machine",
+    "url": "https://web.archive.org/",
+    "description": "Browse historical snapshots of websites over time.",
+    "category": "Reference",
+    "tags": ["archive", "history", "web"]
+  },
+  {
+    "id": "duckduckgo",
+    "name": "DuckDuckGo",
+    "url": "https://duckduckgo.com/",
+    "description": "Privacy-focused search engine that does not track you.",
+    "category": "Reference",
+    "tags": ["search", "privacy"]
+  },
+  {
+    "id": "wolfram-alpha",
+    "name": "Wolfram Alpha",
+    "url": "https://www.wolframalpha.com/",
+    "description": "Computational knowledge engine for math, science, and data questions.",
+    "category": "Reference",
+    "tags": ["math", "compute", "data"]
+  },
+  {
+    "id": "khan-academy",
+    "name": "Khan Academy",
+    "url": "https://www.khanacademy.org/",
+    "description": "Free courses and practice for math, science, economics, and more.",
+    "category": "Learning",
+    "tags": ["education", "courses", "practice"]
+  },
+  {
+    "id": "mit-ocw",
+    "name": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/",
+    "description": "Free lecture materials and courses from MIT.",
+    "category": "Learning",
+    "tags": ["university", "courses", "lectures"]
+  },
+  {
+    "id": "mdn",
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/",
+    "description": "Authoritative documentation for HTML, CSS, JavaScript, and the web platform.",
+    "category": "Learning",
+    "tags": ["web", "docs", "javascript"]
+  },
+  {
+    "id": "open-library",
+    "name": "Open Library",
+    "url": "https://openlibrary.org/",
+    "description": "Borrowable digital books and a catalog of published works.",
+    "category": "Learning",
+    "tags": ["books", "library", "reading"]
+  },
+  {
+    "id": "project-gutenberg",
+    "name": "Project Gutenberg",
+    "url": "https://www.gutenberg.org/",
+    "description": "Tens of thousands of free public-domain ebooks.",
+    "category": "Learning",
+    "tags": ["ebooks", "literature", "public-domain"]
+  },
+  {
+    "id": "google-scholar",
+    "name": "Google Scholar",
+    "url": "https://scholar.google.com/",
+    "description": "Search scholarly literature across disciplines and sources.",
+    "category": "Learning",
+    "tags": ["research", "papers", "academic"]
+  },
+  {
+    "id": "our-world-in-data",
+    "name": "Our World in Data",
+    "url": "https://ourworldindata.org/",
+    "description": "Research and charts on global problems that matter.",
+    "category": "Learning",
+    "tags": ["data", "charts", "global"]
+  },
+  {
+    "id": "photopea",
+    "name": "Photopea",
+    "url": "https://www.photopea.com/",
+    "description": "Browser-based image editor that opens Photoshop and other formats.",
+    "category": "Everyday tools",
+    "tags": ["images", "editor", "design"]
+  },
+  {
+    "id": "squoosh",
+    "name": "Squoosh",
+    "url": "https://squoosh.app/",
+    "description": "Compress and convert images in the browser with fine control.",
+    "category": "Everyday tools",
+    "tags": ["images", "compression", "webp"]
+  },
+  {
+    "id": "excalidraw",
+    "name": "Excalidraw",
+    "url": "https://excalidraw.com/",
+    "description": "Virtual whiteboard for hand-drawn diagrams and collaboration.",
+    "category": "Everyday tools",
+    "tags": ["diagrams", "whiteboard", "sketch"]
+  },
+  {
+    "id": "tinypng",
+    "name": "TinyPNG",
+    "url": "https://tinypng.com/",
+    "description": "Smart lossy compression for PNG and JPEG images.",
+    "category": "Everyday tools",
+    "tags": ["images", "compression", "optimize"]
+  },
+  {
+    "id": "regex101",
+    "name": "regex101",
+    "url": "https://regex101.com/",
+    "description": "Build, test, and explain regular expressions with live feedback.",
+    "category": "Everyday tools",
+    "tags": ["regex", "testing", "dev"]
+  },
+  {
+    "id": "crontab-guru",
+    "name": "crontab.guru",
+    "url": "https://crontab.guru/",
+    "description": "Quickly understand and write cron schedule expressions.",
+    "category": "Everyday tools",
+    "tags": ["cron", "schedule", "ops"]
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "url": "https://www.deepl.com/translator",
+    "description": "High-quality machine translation for many languages.",
+    "category": "Everyday tools",
+    "tags": ["translation", "language"]
+  },
+  {
+    "id": "google-translate",
+    "name": "Google Translate",
+    "url": "https://translate.google.com/",
+    "description": "Translate text, websites, and documents across languages.",
+    "category": "Everyday tools",
+    "tags": ["translation", "language"]
+  },
+  {
+    "id": "speedtest",
+    "name": "Speedtest",
+    "url": "https://www.speedtest.net/",
+    "description": "Measure your internet download and upload speed.",
+    "category": "Everyday tools",
+    "tags": ["network", "bandwidth", "internet"]
+  },
+  {
+    "id": "timeanddate",
+    "name": "timeanddate.com",
+    "url": "https://www.timeanddate.com/",
+    "description": "World clocks, time zones, calendars, and countdown timers.",
+    "category": "Everyday tools",
+    "tags": ["time", "timezone", "calendar"]
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "url": "https://github.com/",
+    "description": "Host code, collaborate on projects, and discover open source.",
+    "category": "Developers",
+    "tags": ["git", "code", "open-source"]
+  },
+  {
+    "id": "stack-overflow",
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com/",
+    "description": "Q&A community for programmers solving real coding problems.",
+    "category": "Developers",
+    "tags": ["qa", "programming", "help"]
+  },
+  {
+    "id": "devdocs",
+    "name": "DevDocs",
+    "url": "https://devdocs.io/",
+    "description": "Fast, offline-capable API documentation browser.",
+    "category": "Developers",
+    "tags": ["docs", "api", "reference"]
+  },
+  {
+    "id": "caniuse",
+    "name": "Can I Use",
+    "url": "https://caniuse.com/",
+    "description": "Browser support tables for modern web features.",
+    "category": "Developers",
+    "tags": ["browsers", "compatibility", "web"]
+  },
+  {
+    "id": "roadmap-sh",
+    "name": "roadmap.sh",
+    "url": "https://roadmap.sh/",
+    "description": "Community-driven learning roadmaps for developer careers.",
+    "category": "Developers",
+    "tags": ["learning", "career", "roadmap"]
+  },
+  {
+    "id": "unsplash",
+    "name": "Unsplash",
+    "url": "https://unsplash.com/",
+    "description": "High-resolution photos free to use under the Unsplash License.",
+    "category": "Design",
+    "tags": ["photos", "stock", "images"]
+  },
+  {
+    "id": "pexels",
+    "name": "Pexels",
+    "url": "https://www.pexels.com/",
+    "description": "Free stock photos and videos for personal and commercial projects.",
+    "category": "Design",
+    "tags": ["photos", "video", "stock"]
+  },
+  {
+    "id": "coolors",
+    "name": "Coolors",
+    "url": "https://coolors.co/",
+    "description": "Generate and explore color palettes for design work.",
+    "category": "Design",
+    "tags": ["color", "palette", "ui"]
+  },
+  {
+    "id": "google-fonts",
+    "name": "Google Fonts",
+    "url": "https://fonts.google.com/",
+    "description": "Free, open-source fonts ready to use on the web.",
+    "category": "Design",
+    "tags": ["typography", "fonts", "web"]
+  },
+  {
+    "id": "atlas-design",
+    "name": "Atlas AI Studio",
+    "url": "https://atlas.design/",
+    "description": "Governed AI creative workflows for games, CGI, and 3D production across many models.",
+    "category": "Design",
+    "tags": ["ai", "3d", "games", "workflows"]
+  },
+  {
+    "id": "have-i-been-pwned",
+    "name": "Have I Been Pwned",
+    "url": "https://haveibeenpwned.com/",
+    "description": "Check whether your email or password appeared in known breaches.",
+    "category": "Privacy",
+    "tags": ["security", "breaches", "passwords"]
+  },
+  {
+    "id": "privacy-guides",
+    "name": "Privacy Guides",
+    "url": "https://www.privacyguides.org/",
+    "description": "Independent recommendations for privacy-respecting tools and habits.",
+    "category": "Privacy",
+    "tags": ["privacy", "guides", "tools"]
+  },
+  {
+    "id": "bitwarden",
+    "name": "Bitwarden",
+    "url": "https://bitwarden.com/",
+    "description": "Open-source password manager with free and paid plans.",
+    "category": "Privacy",
+    "tags": ["passwords", "security", "vault"]
+  },
+  {
+    "id": "proton-mail",
+    "name": "Proton Mail",
+    "url": "https://proton.me/mail",
+    "description": "Encrypted email service focused on privacy.",
+    "category": "Privacy",
+    "tags": ["email", "encryption", "privacy"]
+  },
+  {
+    "id": "signal",
+    "name": "Signal",
+    "url": "https://signal.org/",
+    "description": "Private messaging app with end-to-end encryption.",
+    "category": "Privacy",
+    "tags": ["messaging", "encryption", "chat"]
+  },
+  {
+    "id": "openstreetmap",
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/",
+    "description": "Free, editable world map built by volunteers.",
+    "category": "Maps and weather",
+    "tags": ["maps", "geo", "open-data"]
+  },
+  {
+    "id": "rome2rio",
+    "name": "Rome2Rio",
+    "url": "https://www.rome2rio.com/",
+    "description": "Compare travel routes across plane, train, bus, ferry, and more.",
+    "category": "Maps and weather",
+    "tags": ["travel", "routes", "transport"]
+  },
+  {
+    "id": "windy",
+    "name": "Windy",
+    "url": "https://www.windy.com/",
+    "description": "Detailed weather maps for wind, rain, temperature, and more.",
+    "category": "Maps and weather",
+    "tags": ["weather", "maps", "forecast"]
+  },
+  {
+    "id": "weather-gov",
+    "name": "weather.gov",
+    "url": "https://www.weather.gov/",
+    "description": "Official U.S. National Weather Service forecasts and alerts.",
+    "category": "Maps and weather",
+    "tags": ["weather", "forecast", "alerts"]
+  },
+  {
+    "id": "bbc-news",
+    "name": "BBC News",
+    "url": "https://www.bbc.com/news",
+    "description": "International news coverage from the BBC.",
+    "category": "News",
+    "tags": ["news", "world", "media"]
+  },
+  {
+    "id": "reuters",
+    "name": "Reuters",
+    "url": "https://www.reuters.com/",
+    "description": "Global news wire known for straight reporting.",
+    "category": "News",
+    "tags": ["news", "business", "world"]
+  },
+  {
+    "id": "ap-news",
+    "name": "AP News",
+    "url": "https://apnews.com/",
+    "description": "Associated Press coverage of U.S. and world events.",
+    "category": "News",
+    "tags": ["news", "wire", "world"]
+  },
+  {
+    "id": "pubmed",
+    "name": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "description": "Search biomedical literature from the U.S. National Library of Medicine.",
+    "category": "Science",
+    "tags": ["medicine", "research", "papers"]
+  },
+  {
+    "id": "arxiv",
+    "name": "arXiv",
+    "url": "https://arxiv.org/",
+    "description": "Open access preprints in physics, math, CS, and related fields.",
+    "category": "Science",
+    "tags": ["preprints", "research", "papers"]
+  },
+  {
+    "id": "nasa",
+    "name": "NASA",
+    "url": "https://www.nasa.gov/",
+    "description": "Space exploration news, imagery, and science from NASA.",
+    "category": "Science",
+    "tags": ["space", "science", "images"]
+  }
+]
