@@ -192,6 +192,54 @@
     "tags": ["git", "code", "open-source"]
   },
   {
+    "id": "agent-reach",
+    "name": "Agent Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "CLI that lets AI agents read and search the web — Twitter, Reddit, YouTube, GitHub, and more — without API fees.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "cli", "mcp", "search"]
+  },
+  {
+    "id": "patchright-enhanced",
+    "name": "Patchright Enhanced",
+    "url": "https://github.com/whaleyxbt/patchright-enhanced",
+    "description": "Browser automation toolkit for QA, monitoring, and internal workflows.",
+    "category": "Developers",
+    "tags": ["browser", "automation", "qa", "playwright"]
+  },
+  {
+    "id": "scrapling",
+    "name": "Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "Adaptive web scraping framework for single requests through full-scale crawls.",
+    "category": "Developers",
+    "tags": ["scraping", "crawler", "python"]
+  },
+  {
+    "id": "superpowers",
+    "name": "Superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "description": "Agentic skills framework and software development methodology that works.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "skills", "methodology"]
+  },
+  {
+    "id": "andrej-karpathy-skills",
+    "name": "Andrej Karpathy Skills",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "description": "A CLAUDE.md that improves Claude Code behavior, based on Karpathy's LLM coding pitfalls.",
+    "category": "Developers",
+    "tags": ["ai", "claude", "skills", "prompting"]
+  },
+  {
+    "id": "forrestchang",
+    "name": "forrestchang (Jiayuan Zhang)",
+    "url": "https://github.com/forrestchang",
+    "description": "GitHub profile for Jiayuan Zhang — Multica AI and agent/tooling projects.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "tools", "github"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
