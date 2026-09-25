@@ -200,6 +200,30 @@
     "tags": ["ai", "agents", "cli", "mcp", "search"]
   },
   {
+    "id": "patchright-enhanced",
+    "name": "Patchright Enhanced",
+    "url": "https://github.com/whaleyxbt/patchright-enhanced",
+    "description": "Browser automation toolkit for QA, monitoring, and internal workflows.",
+    "category": "Developers",
+    "tags": ["browser", "automation", "qa", "playwright"]
+  },
+  {
+    "id": "scrapling",
+    "name": "Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "Adaptive web scraping framework for single requests through full-scale crawls.",
+    "category": "Developers",
+    "tags": ["scraping", "crawler", "python"]
+  },
+  {
+    "id": "obra",
+    "name": "obra (Jesse Vincent)",
+    "url": "https://github.com/obra",
+    "description": "GitHub profile for Jesse Vincent — Superpowers and other agentic coding tools.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "tools", "github"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
