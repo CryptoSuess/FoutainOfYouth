@@ -192,6 +192,14 @@
     "tags": ["git", "code", "open-source"]
   },
   {
+    "id": "agent-reach",
+    "name": "Agent Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "CLI that lets AI agents read and search the web — Twitter, Reddit, YouTube, GitHub, and more — without API fees.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "cli", "mcp", "search"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
