@@ -3,13 +3,9 @@
     "id": "wikipedia",
     "name": "Wikipedia",
     "url": "https://www.wikipedia.org/",
-    "description": "Free encyclopedia anyone can edit \u2014 a starting point for almost any topic.",
+    "description": "Free encyclopedia anyone can edit — a starting point for almost any topic.",
     "category": "Reference",
-    "tags": [
-      "encyclopedia",
-      "research",
-      "knowledge"
-    ]
+    "tags": ["encyclopedia", "research", "knowledge"]
   },
   {
     "id": "wiktionary",
@@ -17,11 +13,7 @@
     "url": "https://www.wiktionary.org/",
     "description": "Open dictionary and thesaurus with etymologies across many languages.",
     "category": "Reference",
-    "tags": [
-      "dictionary",
-      "language",
-      "words"
-    ]
+    "tags": ["dictionary", "language", "words"]
   },
   {
     "id": "internet-archive",
@@ -29,11 +21,7 @@
     "url": "https://archive.org/",
     "description": "Digital library of books, audio, video, software, and archived web pages.",
     "category": "Reference",
-    "tags": [
-      "archive",
-      "books",
-      "media"
-    ]
+    "tags": ["archive", "books", "media"]
   },
   {
     "id": "wayback-machine",
@@ -41,11 +29,7 @@
     "url": "https://web.archive.org/",
     "description": "Browse historical snapshots of websites over time.",
     "category": "Reference",
-    "tags": [
-      "archive",
-      "history",
-      "web"
-    ]
+    "tags": ["archive", "history", "web"]
   },
   {
     "id": "duckduckgo",
@@ -53,10 +37,7 @@
     "url": "https://duckduckgo.com/",
     "description": "Privacy-focused search engine that does not track you.",
     "category": "Reference",
-    "tags": [
-      "search",
-      "privacy"
-    ]
+    "tags": ["search", "privacy"]
   },
   {
     "id": "wolfram-alpha",
@@ -64,11 +45,7 @@
     "url": "https://www.wolframalpha.com/",
     "description": "Computational knowledge engine for math, science, and data questions.",
     "category": "Reference",
-    "tags": [
-      "math",
-      "compute",
-      "data"
-    ]
+    "tags": ["math", "compute", "data"]
   },
   {
     "id": "khan-academy",
@@ -76,11 +53,7 @@
     "url": "https://www.khanacademy.org/",
     "description": "Free courses and practice for math, science, economics, and more.",
     "category": "Learning",
-    "tags": [
-      "education",
-      "courses",
-      "practice"
-    ]
+    "tags": ["education", "courses", "practice"]
   },
   {
     "id": "mit-ocw",
@@ -88,11 +61,7 @@
     "url": "https://ocw.mit.edu/",
     "description": "Free lecture materials and courses from MIT.",
     "category": "Learning",
-    "tags": [
-      "university",
-      "courses",
-      "lectures"
-    ]
+    "tags": ["university", "courses", "lectures"]
   },
   {
     "id": "mdn",
@@ -100,11 +69,7 @@
     "url": "https://developer.mozilla.org/",
     "description": "Authoritative documentation for HTML, CSS, JavaScript, and the web platform.",
     "category": "Learning",
-    "tags": [
-      "web",
-      "docs",
-      "javascript"
-    ]
+    "tags": ["web", "docs", "javascript"]
   },
   {
     "id": "open-library",
@@ -112,11 +77,7 @@
     "url": "https://openlibrary.org/",
     "description": "Borrowable digital books and a catalog of published works.",
     "category": "Learning",
-    "tags": [
-      "books",
-      "library",
-      "reading"
-    ]
+    "tags": ["books", "library", "reading"]
   },
   {
     "id": "project-gutenberg",
@@ -124,11 +85,7 @@
     "url": "https://www.gutenberg.org/",
     "description": "Tens of thousands of free public-domain ebooks.",
     "category": "Learning",
-    "tags": [
-      "ebooks",
-      "literature",
-      "public-domain"
-    ]
+    "tags": ["ebooks", "literature", "public-domain"]
   },
   {
     "id": "google-scholar",
@@ -136,11 +93,7 @@
     "url": "https://scholar.google.com/",
     "description": "Search scholarly literature across disciplines and sources.",
     "category": "Learning",
-    "tags": [
-      "research",
-      "papers",
-      "academic"
-    ]
+    "tags": ["research", "papers", "academic"]
   },
   {
     "id": "our-world-in-data",
@@ -148,11 +101,7 @@
     "url": "https://ourworldindata.org/",
     "description": "Research and charts on global problems that matter.",
     "category": "Learning",
-    "tags": [
-      "data",
-      "charts",
-      "global"
-    ]
+    "tags": ["data", "charts", "global"]
   },
   {
     "id": "photopea",
@@ -160,11 +109,7 @@
     "url": "https://www.photopea.com/",
     "description": "Browser-based image editor that opens Photoshop and other formats.",
     "category": "Everyday tools",
-    "tags": [
-      "images",
-      "editor",
-      "design"
-    ]
+    "tags": ["images", "editor", "design"]
   },
   {
     "id": "squoosh",
@@ -172,11 +117,7 @@
     "url": "https://squoosh.app/",
     "description": "Compress and convert images in the browser with fine control.",
     "category": "Everyday tools",
-    "tags": [
-      "images",
-      "compression",
-      "webp"
-    ]
+    "tags": ["images", "compression", "webp"]
   },
   {
     "id": "excalidraw",
@@ -184,11 +125,7 @@
     "url": "https://excalidraw.com/",
     "description": "Virtual whiteboard for hand-drawn diagrams and collaboration.",
     "category": "Everyday tools",
-    "tags": [
-      "diagrams",
-      "whiteboard",
-      "sketch"
-    ]
+    "tags": ["diagrams", "whiteboard", "sketch"]
   },
   {
     "id": "tinypng",
@@ -196,11 +133,7 @@
     "url": "https://tinypng.com/",
     "description": "Smart lossy compression for PNG and JPEG images.",
     "category": "Everyday tools",
-    "tags": [
-      "images",
-      "compression",
-      "optimize"
-    ]
+    "tags": ["images", "compression", "optimize"]
   },
   {
     "id": "regex101",
@@ -208,11 +141,7 @@
     "url": "https://regex101.com/",
     "description": "Build, test, and explain regular expressions with live feedback.",
     "category": "Everyday tools",
-    "tags": [
-      "regex",
-      "testing",
-      "dev"
-    ]
+    "tags": ["regex", "testing", "dev"]
   },
   {
     "id": "crontab-guru",
@@ -220,11 +149,7 @@
     "url": "https://crontab.guru/",
     "description": "Quickly understand and write cron schedule expressions.",
     "category": "Everyday tools",
-    "tags": [
-      "cron",
-      "schedule",
-      "ops"
-    ]
+    "tags": ["cron", "schedule", "ops"]
   },
   {
     "id": "deepl",
@@ -232,10 +157,7 @@
     "url": "https://www.deepl.com/translator",
     "description": "High-quality machine translation for many languages.",
     "category": "Everyday tools",
-    "tags": [
-      "translation",
-      "language"
-    ]
+    "tags": ["translation", "language"]
   },
   {
     "id": "google-translate",
@@ -243,10 +165,7 @@
     "url": "https://translate.google.com/",
     "description": "Translate text, websites, and documents across languages.",
     "category": "Everyday tools",
-    "tags": [
-      "translation",
-      "language"
-    ]
+    "tags": ["translation", "language"]
   },
   {
     "id": "speedtest",
@@ -254,11 +173,7 @@
     "url": "https://www.speedtest.net/",
     "description": "Measure your internet download and upload speed.",
     "category": "Everyday tools",
-    "tags": [
-      "network",
-      "bandwidth",
-      "internet"
-    ]
+    "tags": ["network", "bandwidth", "internet"]
   },
   {
     "id": "timeanddate",
@@ -266,11 +181,7 @@
     "url": "https://www.timeanddate.com/",
     "description": "World clocks, time zones, calendars, and countdown timers.",
     "category": "Everyday tools",
-    "tags": [
-      "time",
-      "timezone",
-      "calendar"
-    ]
+    "tags": ["time", "timezone", "calendar"]
   },
   {
     "id": "github",
@@ -278,25 +189,15 @@
     "url": "https://github.com/",
     "description": "Host code, collaborate on projects, and discover open source.",
     "category": "Developers",
-    "tags": [
-      "git",
-      "code",
-      "open-source"
-    ]
+    "tags": ["git", "code", "open-source"]
   },
   {
     "id": "agent-reach",
     "name": "Agent Reach",
     "url": "https://github.com/Panniantong/Agent-Reach",
-    "description": "CLI that lets AI agents read and search the web \u2014 Twitter, Reddit, YouTube, GitHub, and more \u2014 without API fees.",
+    "description": "CLI that lets AI agents read and search the web — Twitter, Reddit, YouTube, GitHub, and more — without API fees.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "agents",
-      "cli",
-      "mcp",
-      "search"
-    ]
+    "tags": ["ai", "agents", "cli", "mcp", "search"]
   },
   {
     "id": "patchright-enhanced",
@@ -304,12 +205,7 @@
     "url": "https://github.com/whaleyxbt/patchright-enhanced",
     "description": "Browser automation toolkit for QA, monitoring, and internal workflows.",
     "category": "Developers",
-    "tags": [
-      "browser",
-      "automation",
-      "qa",
-      "playwright"
-    ]
+    "tags": ["browser", "automation", "qa", "playwright"]
   },
   {
     "id": "scrapling",
@@ -317,11 +213,7 @@
     "url": "https://github.com/D4Vinci/Scrapling",
     "description": "Adaptive web scraping framework for single requests through full-scale crawls.",
     "category": "Developers",
-    "tags": [
-      "scraping",
-      "crawler",
-      "python"
-    ]
+    "tags": ["scraping", "crawler", "python"]
   },
   {
     "id": "superpowers",
@@ -329,12 +221,7 @@
     "url": "https://github.com/obra/superpowers",
     "description": "Agentic skills framework and software development methodology that works.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "agents",
-      "skills",
-      "methodology"
-    ]
+    "tags": ["ai", "agents", "skills", "methodology"]
   },
   {
     "id": "andrej-karpathy-skills",
@@ -342,50 +229,31 @@
     "url": "https://github.com/multica-ai/andrej-karpathy-skills",
     "description": "A CLAUDE.md that improves Claude Code behavior, based on Karpathy's LLM coding pitfalls.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "claude",
-      "skills",
-      "prompting"
-    ]
+    "tags": ["ai", "claude", "skills", "prompting"]
   },
   {
     "id": "forrestchang",
     "name": "forrestchang (Jiayuan Zhang)",
     "url": "https://github.com/forrestchang",
-    "description": "GitHub profile for Jiayuan Zhang \u2014 Multica AI and agent/tooling projects.",
+    "description": "GitHub profile for Jiayuan Zhang — Multica AI and agent/tooling projects.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "agents",
-      "tools",
-      "github"
-    ]
+    "tags": ["ai", "agents", "tools", "github"]
   },
   {
     "id": "agricidaniel",
     "name": "AgriciDaniel",
     "url": "https://github.com/AgriciDaniel",
-    "description": "GitHub profile for Agrici.Daniel \u2014 open-source Claude and Codex skills for SEO, ads, and content.",
+    "description": "GitHub profile for Agrici.Daniel — open-source Claude and Codex skills for SEO, ads, and content.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "marketing",
-      "seo",
-      "skills"
-    ]
+    "tags": ["ai", "marketing", "seo", "skills"]
   },
   {
     "id": "ai-engineering-from-scratch",
     "name": "AI Engineering from Scratch",
     "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-    "description": "Learn it, build it, ship it \u2014 a hands-on path into AI engineering.",
+    "description": "Learn it, build it, ship it — a hands-on path into AI engineering.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "learning",
-      "engineering"
-    ]
+    "tags": ["ai", "learning", "engineering"]
   },
   {
     "id": "agentmemory",
@@ -393,25 +261,15 @@
     "url": "https://github.com/rohitg00/agentmemory",
     "description": "Persistent memory for AI coding agents, based on real-world benchmarks.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "agents",
-      "memory"
-    ]
+    "tags": ["ai", "agents", "memory"]
   },
   {
     "id": "claude-code-game-studios",
     "name": "Claude Code Game Studios",
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-    "description": "Turn Claude Code into a full game-dev studio \u2014 agents, workflow skills, and studio-style coordination.",
+    "description": "Turn Claude Code into a full game-dev studio — agents, workflow skills, and studio-style coordination.",
     "category": "Developers",
-    "tags": [
-      "ai",
-      "claude",
-      "games",
-      "agents",
-      "skills"
-    ]
+    "tags": ["ai", "claude", "games", "agents", "skills"]
   },
   {
     "id": "stack-overflow",
@@ -419,11 +277,7 @@
     "url": "https://stackoverflow.com/",
     "description": "Q&A community for programmers solving real coding problems.",
     "category": "Developers",
-    "tags": [
-      "qa",
-      "programming",
-      "help"
-    ]
+    "tags": ["qa", "programming", "help"]
   },
   {
     "id": "devdocs",
@@ -431,11 +285,7 @@
     "url": "https://devdocs.io/",
     "description": "Fast, offline-capable API documentation browser.",
     "category": "Developers",
-    "tags": [
-      "docs",
-      "api",
-      "reference"
-    ]
+    "tags": ["docs", "api", "reference"]
   },
   {
     "id": "caniuse",
@@ -443,11 +293,7 @@
     "url": "https://caniuse.com/",
     "description": "Browser support tables for modern web features.",
     "category": "Developers",
-    "tags": [
-      "browsers",
-      "compatibility",
-      "web"
-    ]
+    "tags": ["browsers", "compatibility", "web"]
   },
   {
     "id": "roadmap-sh",
@@ -455,11 +301,7 @@
     "url": "https://roadmap.sh/",
     "description": "Community-driven learning roadmaps for developer careers.",
     "category": "Developers",
-    "tags": [
-      "learning",
-      "career",
-      "roadmap"
-    ]
+    "tags": ["learning", "career", "roadmap"]
   },
   {
     "id": "unsplash",
@@ -467,11 +309,7 @@
     "url": "https://unsplash.com/",
     "description": "High-resolution photos free to use under the Unsplash License.",
     "category": "Design",
-    "tags": [
-      "photos",
-      "stock",
-      "images"
-    ]
+    "tags": ["photos", "stock", "images"]
   },
   {
     "id": "pexels",
@@ -479,11 +317,7 @@
     "url": "https://www.pexels.com/",
     "description": "Free stock photos and videos for personal and commercial projects.",
     "category": "Design",
-    "tags": [
-      "photos",
-      "video",
-      "stock"
-    ]
+    "tags": ["photos", "video", "stock"]
   },
   {
     "id": "coolors",
@@ -491,11 +325,7 @@
     "url": "https://coolors.co/",
     "description": "Generate and explore color palettes for design work.",
     "category": "Design",
-    "tags": [
-      "color",
-      "palette",
-      "ui"
-    ]
+    "tags": ["color", "palette", "ui"]
   },
   {
     "id": "google-fonts",
@@ -503,11 +333,7 @@
     "url": "https://fonts.google.com/",
     "description": "Free, open-source fonts ready to use on the web.",
     "category": "Design",
-    "tags": [
-      "typography",
-      "fonts",
-      "web"
-    ]
+    "tags": ["typography", "fonts", "web"]
   },
   {
     "id": "atlas-design",
@@ -515,12 +341,7 @@
     "url": "https://atlas.design/",
     "description": "Governed AI creative workflows for games, CGI, and 3D production across many models.",
     "category": "Design",
-    "tags": [
-      "ai",
-      "3d",
-      "games",
-      "workflows"
-    ]
+    "tags": ["ai", "3d", "games", "workflows"]
   },
   {
     "id": "have-i-been-pwned",
@@ -528,11 +349,7 @@
     "url": "https://haveibeenpwned.com/",
     "description": "Check whether your email or password appeared in known breaches.",
     "category": "Privacy",
-    "tags": [
-      "security",
-      "breaches",
-      "passwords"
-    ]
+    "tags": ["security", "breaches", "passwords"]
   },
   {
     "id": "privacy-guides",
@@ -540,11 +357,7 @@
     "url": "https://www.privacyguides.org/",
     "description": "Independent recommendations for privacy-respecting tools and habits.",
     "category": "Privacy",
-    "tags": [
-      "privacy",
-      "guides",
-      "tools"
-    ]
+    "tags": ["privacy", "guides", "tools"]
   },
   {
     "id": "bitwarden",
@@ -552,11 +365,7 @@
     "url": "https://bitwarden.com/",
     "description": "Open-source password manager with free and paid plans.",
     "category": "Privacy",
-    "tags": [
-      "passwords",
-      "security",
-      "vault"
-    ]
+    "tags": ["passwords", "security", "vault"]
   },
   {
     "id": "proton-mail",
@@ -564,11 +373,7 @@
     "url": "https://proton.me/mail",
     "description": "Encrypted email service focused on privacy.",
     "category": "Privacy",
-    "tags": [
-      "email",
-      "encryption",
-      "privacy"
-    ]
+    "tags": ["email", "encryption", "privacy"]
   },
   {
     "id": "signal",
@@ -576,11 +381,7 @@
     "url": "https://signal.org/",
     "description": "Private messaging app with end-to-end encryption.",
     "category": "Privacy",
-    "tags": [
-      "messaging",
-      "encryption",
-      "chat"
-    ]
+    "tags": ["messaging", "encryption", "chat"]
   },
   {
     "id": "openstreetmap",
@@ -588,11 +389,7 @@
     "url": "https://www.openstreetmap.org/",
     "description": "Free, editable world map built by volunteers.",
     "category": "Maps and weather",
-    "tags": [
-      "maps",
-      "geo",
-      "open-data"
-    ]
+    "tags": ["maps", "geo", "open-data"]
   },
   {
     "id": "rome2rio",
@@ -600,11 +397,7 @@
     "url": "https://www.rome2rio.com/",
     "description": "Compare travel routes across plane, train, bus, ferry, and more.",
     "category": "Maps and weather",
-    "tags": [
-      "travel",
-      "routes",
-      "transport"
-    ]
+    "tags": ["travel", "routes", "transport"]
   },
   {
     "id": "windy",
@@ -612,11 +405,7 @@
     "url": "https://www.windy.com/",
     "description": "Detailed weather maps for wind, rain, temperature, and more.",
     "category": "Maps and weather",
-    "tags": [
-      "weather",
-      "maps",
-      "forecast"
-    ]
+    "tags": ["weather", "maps", "forecast"]
   },
   {
     "id": "weather-gov",
@@ -624,11 +413,7 @@
     "url": "https://www.weather.gov/",
     "description": "Official U.S. National Weather Service forecasts and alerts.",
     "category": "Maps and weather",
-    "tags": [
-      "weather",
-      "forecast",
-      "alerts"
-    ]
+    "tags": ["weather", "forecast", "alerts"]
   },
   {
     "id": "bbc-news",
@@ -636,11 +421,7 @@
     "url": "https://www.bbc.com/news",
     "description": "International news coverage from the BBC.",
     "category": "News",
-    "tags": [
-      "news",
-      "world",
-      "media"
-    ]
+    "tags": ["news", "world", "media"]
   },
   {
     "id": "reuters",
@@ -648,11 +429,7 @@
     "url": "https://www.reuters.com/",
     "description": "Global news wire known for straight reporting.",
     "category": "News",
-    "tags": [
-      "news",
-      "business",
-      "world"
-    ]
+    "tags": ["news", "business", "world"]
   },
   {
     "id": "ap-news",
@@ -660,11 +437,7 @@
     "url": "https://apnews.com/",
     "description": "Associated Press coverage of U.S. and world events.",
     "category": "News",
-    "tags": [
-      "news",
-      "wire",
-      "world"
-    ]
+    "tags": ["news", "wire", "world"]
   },
   {
     "id": "pubmed",
@@ -672,11 +445,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/",
     "description": "Search biomedical literature from the U.S. National Library of Medicine.",
     "category": "Science",
-    "tags": [
-      "medicine",
-      "research",
-      "papers"
-    ]
+    "tags": ["medicine", "research", "papers"]
   },
   {
     "id": "arxiv",
@@ -684,11 +453,7 @@
     "url": "https://arxiv.org/",
     "description": "Open access preprints in physics, math, CS, and related fields.",
     "category": "Science",
-    "tags": [
-      "preprints",
-      "research",
-      "papers"
-    ]
+    "tags": ["preprints", "research", "papers"]
   },
   {
     "id": "nasa",
@@ -696,10 +461,6 @@
     "url": "https://www.nasa.gov/",
     "description": "Space exploration news, imagery, and science from NASA.",
     "category": "Science",
-    "tags": [
-      "space",
-      "science",
-      "images"
-    ]
+    "tags": ["space", "science", "images"]
   }
 ]
