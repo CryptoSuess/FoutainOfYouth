@@ -280,6 +280,22 @@
     "tags": ["ai", "engineering", "tools", "github"]
   },
   {
+    "id": "basegold",
+    "name": "BaseGold",
+    "url": "https://basegold.io/",
+    "description": "Fixed-supply BG token on Base — a scarce digital gold with on-chain burn mechanisms.",
+    "category": "Crypto",
+    "tags": ["base", "token", "defi"]
+  },
+  {
+    "id": "mineswap",
+    "name": "MineSwap",
+    "url": "https://www.mineswap.app/",
+    "description": "NFT gaming economy on Base with evolving miners, referrals, and LP fee shares.",
+    "category": "Crypto",
+    "tags": ["base", "nft", "gaming", "defi"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
