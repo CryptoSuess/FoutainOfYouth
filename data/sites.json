@@ -272,6 +272,14 @@
     "tags": ["ai", "claude", "games", "agents", "skills"]
   },
   {
+    "id": "rohitg00",
+    "name": "rohitg00 (Rohit Ghumare)",
+    "url": "https://github.com/rohitg00",
+    "description": "GitHub profile for Rohit Ghumare — AI engineering guides, AgentMemory, and developer tooling.",
+    "category": "Developers",
+    "tags": ["ai", "engineering", "tools", "github"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
