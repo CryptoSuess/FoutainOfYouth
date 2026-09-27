@@ -69,15 +69,21 @@
     previewHideTimer = null;
   }
 
+  function setPreviewState(state) {
+    previewLoadingEl.hidden = state !== "loading";
+    previewImageEl.hidden = state !== "ready";
+    previewFallbackEl.hidden = state !== "fallback";
+  }
+
   function hidePreview() {
     clearPreviewTimers();
     activePreviewCard = null;
     previewEl.hidden = true;
     previewEl.setAttribute("aria-hidden", "true");
     previewImageEl.removeAttribute("src");
-    previewImageEl.hidden = true;
-    previewFallbackEl.hidden = true;
-    previewLoadingEl.hidden = false;
+    previewImageEl.onload = null;
+    previewImageEl.onerror = null;
+    setPreviewState("loading");
   }
 
   function positionPreview(card) {
@@ -105,27 +111,27 @@
 
     activePreviewCard = card;
     previewLabelEl.textContent = name;
-    previewLoadingEl.hidden = false;
-    previewFallbackEl.hidden = true;
-    previewImageEl.hidden = true;
     previewImageEl.alt = `Preview of ${name}`;
+    setPreviewState("loading");
 
     const imageUrl = previewImageUrl(url);
     previewImageEl.onload = () => {
       if (activePreviewCard !== card) return;
-      previewLoadingEl.hidden = true;
-      previewFallbackEl.hidden = true;
-      previewImageEl.hidden = false;
+      if (!previewImageEl.naturalWidth) {
+        setPreviewState("fallback");
+      } else {
+        setPreviewState("ready");
+      }
       positionPreview(card);
     };
     previewImageEl.onerror = () => {
       if (activePreviewCard !== card) return;
-      previewLoadingEl.hidden = true;
-      previewImageEl.hidden = true;
-      previewFallbackEl.hidden = false;
+      setPreviewState("fallback");
       positionPreview(card);
     };
 
+    // Force reload if hovering the same card again.
+    previewImageEl.src = "";
     previewImageEl.src = imageUrl;
     previewEl.hidden = false;
     previewEl.setAttribute("aria-hidden", "false");
@@ -133,11 +139,10 @@
   }
 
   function scheduleShowPreview(card) {
-    if (!canHoverPreview) return;
     clearPreviewTimers();
     previewShowTimer = window.setTimeout(() => {
       showPreview(card);
-    }, 280);
+    }, 220);
   }
 
   function scheduleHidePreview() {
