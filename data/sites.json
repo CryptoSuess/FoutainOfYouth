@@ -368,6 +368,14 @@
     "tags": ["ai", "3d", "games", "workflows"]
   },
   {
+    "id": "kleo",
+    "name": "Kleo",
+    "url": "https://mykleo.ai/",
+    "description": "AI workspace to research, write, design, and schedule social content with your brand kit.",
+    "category": "Design",
+    "tags": ["ai", "social", "content", "marketing"]
+  },
+  {
     "id": "have-i-been-pwned",
     "name": "Have I Been Pwned",
     "url": "https://haveibeenpwned.com/",
