@@ -4,9 +4,17 @@
   const sitesEl = document.getElementById("sites");
   const emptyEl = document.getElementById("empty");
   const resultCountEl = document.getElementById("result-count");
+  const previewEl = document.getElementById("site-preview");
+  const previewLabelEl = document.getElementById("site-preview-label");
+  const previewImageEl = document.getElementById("site-preview-image");
+  const previewLoadingEl = document.getElementById("site-preview-loading");
+  const previewFallbackEl = document.getElementById("site-preview-fallback");
 
   let sites = [];
   let activeCategory = "All";
+  let previewShowTimer = null;
+  let previewHideTimer = null;
+  let activePreviewCard = null;
 
   function escapeHtml(value) {
     return String(value)
@@ -49,6 +57,101 @@
     });
   }
 
+  function previewImageUrl(siteUrl) {
+    // Free screenshot thumbnail service; loads only on hover.
+    return `https://image.thum.io/get/width/720/crop/450/noanimate/${siteUrl}`;
+  }
+
+  function clearPreviewTimers() {
+    window.clearTimeout(previewShowTimer);
+    window.clearTimeout(previewHideTimer);
+    previewShowTimer = null;
+    previewHideTimer = null;
+  }
+
+  function setPreviewState(state) {
+    previewLoadingEl.hidden = state !== "loading";
+    previewImageEl.hidden = state !== "ready";
+    previewFallbackEl.hidden = state !== "fallback";
+  }
+
+  function hidePreview() {
+    clearPreviewTimers();
+    activePreviewCard = null;
+    previewEl.hidden = true;
+    previewEl.setAttribute("aria-hidden", "true");
+    previewImageEl.removeAttribute("src");
+    previewImageEl.onload = null;
+    previewImageEl.onerror = null;
+    setPreviewState("loading");
+  }
+
+  function positionPreview(card) {
+    const gap = 12;
+    const rect = card.getBoundingClientRect();
+    const previewWidth = Math.min(360, window.innerWidth - 24);
+    const previewHeight = previewEl.offsetHeight || 260;
+
+    let left = rect.left + rect.width / 2 - previewWidth / 2;
+    left = Math.max(12, Math.min(left, window.innerWidth - previewWidth - 12));
+
+    let top = rect.top - previewHeight - gap;
+    if (top < 12) {
+      top = rect.bottom + gap;
+    }
+
+    previewEl.style.width = `${previewWidth}px`;
+    previewEl.style.left = `${left}px`;
+    previewEl.style.top = `${top}px`;
+  }
+
+  function showPreview(card) {
+    const url = card.href;
+    const name = card.dataset.name || "Site preview";
+
+    activePreviewCard = card;
+    previewLabelEl.textContent = name;
+    previewImageEl.alt = `Preview of ${name}`;
+    setPreviewState("loading");
+
+    const imageUrl = previewImageUrl(url);
+    previewImageEl.onload = () => {
+      if (activePreviewCard !== card) return;
+      if (!previewImageEl.naturalWidth) {
+        setPreviewState("fallback");
+      } else {
+        setPreviewState("ready");
+      }
+      positionPreview(card);
+    };
+    previewImageEl.onerror = () => {
+      if (activePreviewCard !== card) return;
+      setPreviewState("fallback");
+      positionPreview(card);
+    };
+
+    // Force reload if hovering the same card again.
+    previewImageEl.src = "";
+    previewImageEl.src = imageUrl;
+    previewEl.hidden = false;
+    previewEl.setAttribute("aria-hidden", "false");
+    positionPreview(card);
+  }
+
+  function scheduleShowPreview(card) {
+    clearPreviewTimers();
+    previewShowTimer = window.setTimeout(() => {
+      showPreview(card);
+    }, 220);
+  }
+
+  function scheduleHidePreview() {
+    clearPreviewTimers();
+    previewHideTimer = window.setTimeout(() => {
+      hidePreview();
+    }, 120);
+  }
+
   function renderCategories() {
     const categories = uniqueCategories(sites);
     categoriesEl.innerHTML = categories
@@ -67,6 +170,7 @@
   }
 
   function renderSites() {
+    hidePreview();
     const results = filteredSites();
     resultCountEl.textContent =
       results.length === 1
@@ -93,6 +197,7 @@
             href="${escapeHtml(site.url)}"
             target="_blank"
             rel="noopener noreferrer"
+            data-name="${escapeHtml(site.name)}"
             style="animation-delay: ${Math.min(index, 12) * 35}ms"
           >
             <div class="site-meta">
@@ -105,6 +210,25 @@
           </a>`;
       })
       .join("");
+
+    bindCardPreviewHandlers();
+  }
+
+  function bindCardPreviewHandlers() {
+    sitesEl.querySelectorAll(".site-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        scheduleShowPreview(card);
+      });
+      card.addEventListener("mouseleave", () => {
+        scheduleHidePreview();
+      });
+      card.addEventListener("focus", () => {
+        scheduleShowPreview(card);
+      });
+      card.addEventListener("blur", () => {
+        scheduleHidePreview();
+      });
+    });
   }
 
   function render() {
@@ -122,6 +246,14 @@
   searchInput.addEventListener("input", () => {
     renderSites();
   });
+
+  window.addEventListener("scroll", () => {
+    if (!previewEl.hidden && activePreviewCard) {
+      positionPreview(activePreviewCard);
+    }
+  }, { passive: true });
+
+  window.addEventListener("resize", hidePreview);
 
   async function init() {
     try {

@@ -60,6 +60,25 @@
       </footer>
     </div>
 
+    <div
+      id="site-preview"
+      class="site-preview"
+      hidden
+      role="tooltip"
+      aria-hidden="true"
+    >
+      <p id="site-preview-label" class="site-preview-label"></p>
+      <div class="site-preview-frame">
+        <div id="site-preview-loading" class="site-preview-loading">
+          Loading preview…
+        </div>
+        <img id="site-preview-image" class="site-preview-image" alt="" />
+        <p id="site-preview-fallback" class="site-preview-fallback" hidden>
+          Preview unavailable — click the card to open the site.
+        </p>
+      </div>
+    </div>
+
     <script src="js/app.js" defer></script>
   </body>
 </html>

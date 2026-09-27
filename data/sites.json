@@ -272,6 +272,22 @@
     "tags": ["ai", "claude", "games", "agents", "skills"]
   },
   {
+    "id": "ruview",
+    "name": "RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "Turns WiFi signals into real-time spatial intelligence, vital signs, and presence detection — no cameras.",
+    "category": "Developers",
+    "tags": ["wifi", "sensing", "ai", "privacy"]
+  },
+  {
+    "id": "wshobson-agents",
+    "name": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents",
+    "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, Copilot, and more.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "plugins", "marketplace"]
+  },
+  {
     "id": "rohitg00",
     "name": "rohitg00 (Rohit Ghumare)",
     "url": "https://github.com/rohitg00",

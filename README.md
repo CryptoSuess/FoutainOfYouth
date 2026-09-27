@@ -6,7 +6,7 @@ A public library of useful websites — curated, searchable, and easy to extend.
 
 [![Fountain of Youth library UI](docs/library-preview.png)](https://cryptosuess.github.io/FoutainOfYouth/)
 
-Search by name, description, or tag. Filter by category. Click any card to visit the site.
+Search by name, description, or tag. Filter by category. Hover a card (desktop) to preview the site, then click to open it.
 
 ## Run locally
 
@@ -50,4 +50,4 @@ Example:
 
 ## Categories
 
-Reference · Learning · Everyday tools · Developers · Design · Privacy · Maps and weather · News · Science
+Reference · Learning · Everyday tools · Developers · Design · Privacy · Maps and weather · News · Science · Crypto
