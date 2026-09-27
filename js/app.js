@@ -4,9 +4,20 @@
   const sitesEl = document.getElementById("sites");
   const emptyEl = document.getElementById("empty");
   const resultCountEl = document.getElementById("result-count");
+  const previewEl = document.getElementById("site-preview");
+  const previewLabelEl = document.getElementById("site-preview-label");
+  const previewImageEl = document.getElementById("site-preview-image");
+  const previewLoadingEl = document.getElementById("site-preview-loading");
+  const previewFallbackEl = document.getElementById("site-preview-fallback");
 
   let sites = [];
   let activeCategory = "All";
+  let previewShowTimer = null;
+  let previewHideTimer = null;
+  let activePreviewCard = null;
+
+  const canHoverPreview =
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   function escapeHtml(value) {
     return String(value)
@@ -49,6 +60,95 @@
     });
   }
 
+  function previewImageUrl(siteUrl) {
+    return `https://s0.wp.com/mshots/v1/${encodeURIComponent(siteUrl)}?w=720`;
+  }
+
+  function clearPreviewTimers() {
+    window.clearTimeout(previewShowTimer);
+    window.clearTimeout(previewHideTimer);
+    previewShowTimer = null;
+    previewHideTimer = null;
+  }
+
+  function hidePreview() {
+    clearPreviewTimers();
+    activePreviewCard = null;
+    previewEl.hidden = true;
+    previewEl.setAttribute("aria-hidden", "true");
+    previewImageEl.removeAttribute("src");
+    previewImageEl.hidden = true;
+    previewFallbackEl.hidden = true;
+    previewLoadingEl.hidden = false;
+  }
+
+  function positionPreview(card) {
+    const gap = 12;
+    const rect = card.getBoundingClientRect();
+    const previewWidth = Math.min(360, window.innerWidth - 24);
+    const previewHeight = previewEl.offsetHeight || 260;
+
+    let left = rect.left + rect.width / 2 - previewWidth / 2;
+    left = Math.max(12, Math.min(left, window.innerWidth - previewWidth - 12));
+
+    let top = rect.top - previewHeight - gap;
+    if (top < 12) {
+      top = rect.bottom + gap;
+    }
+
+    previewEl.style.width = `${previewWidth}px`;
+    previewEl.style.left = `${left}px`;
+    previewEl.style.top = `${top}px`;
+  }
+
+  function showPreview(card) {
+    const url = card.href;
+    const name = card.dataset.name || "Site preview";
+
+    activePreviewCard = card;
+    previewLabelEl.textContent = name;
+    previewLoadingEl.hidden = false;
+    previewFallbackEl.hidden = true;
+    previewImageEl.hidden = true;
+    previewImageEl.alt = `Preview of ${name}`;
+
+    const imageUrl = previewImageUrl(url);
+    previewImageEl.onload = () => {
+      if (activePreviewCard !== card) return;
+      previewLoadingEl.hidden = true;
+      previewFallbackEl.hidden = true;
+      previewImageEl.hidden = false;
+      positionPreview(card);
+    };
+    previewImageEl.onerror = () => {
+      if (activePreviewCard !== card) return;
+      previewLoadingEl.hidden = true;
+      previewImageEl.hidden = true;
+      previewFallbackEl.hidden = false;
+      positionPreview(card);
+    };
+
+    previewImageEl.src = imageUrl;
+    previewEl.hidden = false;
+    previewEl.setAttribute("aria-hidden", "false");
+    positionPreview(card);
+  }
+
+  function scheduleShowPreview(card) {
+    if (!canHoverPreview) return;
+    clearPreviewTimers();
+    previewShowTimer = window.setTimeout(() => {
+      showPreview(card);
+    }, 280);
+  }
+
+  function scheduleHidePreview() {
+    clearPreviewTimers();
+    previewHideTimer = window.setTimeout(() => {
+      hidePreview();
+    }, 120);
+  }
+
   function renderCategories() {
     const categories = uniqueCategories(sites);
     categoriesEl.innerHTML = categories
@@ -67,6 +167,7 @@
   }
 
   function renderSites() {
+    hidePreview();
     const results = filteredSites();
     resultCountEl.textContent =
       results.length === 1
@@ -93,6 +194,7 @@
             href="${escapeHtml(site.url)}"
             target="_blank"
             rel="noopener noreferrer"
+            data-name="${escapeHtml(site.name)}"
             style="animation-delay: ${Math.min(index, 12) * 35}ms"
           >
             <div class="site-meta">
@@ -122,6 +224,46 @@
   searchInput.addEventListener("input", () => {
     renderSites();
   });
+
+  sitesEl.addEventListener("pointerenter", (event) => {
+    const card = event.target.closest(".site-card");
+    if (!card || !sitesEl.contains(card)) return;
+    scheduleShowPreview(card);
+  }, true);
+
+  sitesEl.addEventListener("pointerleave", (event) => {
+    const card = event.target.closest(".site-card");
+    if (!card || !sitesEl.contains(card)) return;
+    scheduleHidePreview();
+  }, true);
+
+  sitesEl.addEventListener("focusin", (event) => {
+    const card = event.target.closest(".site-card");
+    if (!card) return;
+    scheduleShowPreview(card);
+  });
+
+  sitesEl.addEventListener("focusout", (event) => {
+    const card = event.target.closest(".site-card");
+    if (!card) return;
+    scheduleHidePreview();
+  });
+
+  previewEl.addEventListener("pointerenter", () => {
+    clearPreviewTimers();
+  });
+
+  previewEl.addEventListener("pointerleave", () => {
+    scheduleHidePreview();
+  });
+
+  window.addEventListener("scroll", () => {
+    if (!previewEl.hidden && activePreviewCard) {
+      positionPreview(activePreviewCard);
+    }
+  }, { passive: true });
+
+  window.addEventListener("resize", hidePreview);
 
   async function init() {
     try {
