@@ -416,16 +416,6 @@ body {
   .sites {
     grid-template-columns: 1fr;
   }
-
-  .site-preview {
-    display: none;
-  }
-}
-
-@media (hover: none), (pointer: coarse) {
-  .site-preview {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
