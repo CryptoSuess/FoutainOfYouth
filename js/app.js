@@ -16,9 +16,6 @@
   let previewHideTimer = null;
   let activePreviewCard = null;
 
-  const canHoverPreview =
-    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -61,7 +58,8 @@
   }
 
   function previewImageUrl(siteUrl) {
-    return `https://s0.wp.com/mshots/v1/${encodeURIComponent(siteUrl)}?w=720`;
+    // Free screenshot thumbnail service; loads only on hover.
+    return `https://image.thum.io/get/width/720/crop/450/noanimate/${siteUrl}`;
   }
 
   function clearPreviewTimers() {
@@ -207,6 +205,25 @@
           </a>`;
       })
       .join("");
+
+    bindCardPreviewHandlers();
+  }
+
+  function bindCardPreviewHandlers() {
+    sitesEl.querySelectorAll(".site-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        scheduleShowPreview(card);
+      });
+      card.addEventListener("mouseleave", () => {
+        scheduleHidePreview();
+      });
+      card.addEventListener("focus", () => {
+        scheduleShowPreview(card);
+      });
+      card.addEventListener("blur", () => {
+        scheduleHidePreview();
+      });
+    });
   }
 
   function render() {
@@ -223,38 +240,6 @@
 
   searchInput.addEventListener("input", () => {
     renderSites();
-  });
-
-  sitesEl.addEventListener("pointerenter", (event) => {
-    const card = event.target.closest(".site-card");
-    if (!card || !sitesEl.contains(card)) return;
-    scheduleShowPreview(card);
-  }, true);
-
-  sitesEl.addEventListener("pointerleave", (event) => {
-    const card = event.target.closest(".site-card");
-    if (!card || !sitesEl.contains(card)) return;
-    scheduleHidePreview();
-  }, true);
-
-  sitesEl.addEventListener("focusin", (event) => {
-    const card = event.target.closest(".site-card");
-    if (!card) return;
-    scheduleShowPreview(card);
-  });
-
-  sitesEl.addEventListener("focusout", (event) => {
-    const card = event.target.closest(".site-card");
-    if (!card) return;
-    scheduleHidePreview();
-  });
-
-  previewEl.addEventListener("pointerenter", () => {
-    clearPreviewTimers();
-  });
-
-  previewEl.addEventListener("pointerleave", () => {
-    scheduleHidePreview();
   });
 
   window.addEventListener("scroll", () => {
