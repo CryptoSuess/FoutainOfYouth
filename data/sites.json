@@ -264,6 +264,38 @@
     "tags": ["ai", "agents", "memory"]
   },
   {
+    "id": "claude-code-game-studios",
+    "name": "Claude Code Game Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+    "description": "Turn Claude Code into a full game-dev studio — agents, workflow skills, and studio-style coordination.",
+    "category": "Developers",
+    "tags": ["ai", "claude", "games", "agents", "skills"]
+  },
+  {
+    "id": "rohitg00",
+    "name": "rohitg00 (Rohit Ghumare)",
+    "url": "https://github.com/rohitg00",
+    "description": "GitHub profile for Rohit Ghumare — AI engineering guides, AgentMemory, and developer tooling.",
+    "category": "Developers",
+    "tags": ["ai", "engineering", "tools", "github"]
+  },
+  {
+    "id": "basegold",
+    "name": "BaseGold",
+    "url": "https://basegold.io/",
+    "description": "Fixed-supply BG token on Base — a scarce digital gold with on-chain burn mechanisms.",
+    "category": "Crypto",
+    "tags": ["base", "token", "defi"]
+  },
+  {
+    "id": "mineswap",
+    "name": "MineSwap",
+    "url": "https://www.mineswap.app/",
+    "description": "NFT gaming economy on Base with evolving miners, referrals, and LP fee shares.",
+    "category": "Crypto",
+    "tags": ["base", "nft", "gaming", "defi"]
+  },
+  {
     "id": "stack-overflow",
     "name": "Stack Overflow",
     "url": "https://stackoverflow.com/",
