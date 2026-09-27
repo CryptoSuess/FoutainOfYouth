@@ -2,7 +2,13 @@
 
 A public library of useful websites — curated, searchable, and easy to extend.
 
-Browse the live library once [GitHub Pages](https://docs.github.com/en/pages) is enabled for this repo (Settings → Pages → Deploy from GitHub Actions). Locally:
+**[Open the library →](https://cryptosuess.github.io/FoutainOfYouth/)**
+
+[![Fountain of Youth library UI](docs/library-preview.png)](https://cryptosuess.github.io/FoutainOfYouth/)
+
+Search by name, description, or tag. Filter by category. Click any card to visit the site.
+
+## Run locally
 
 ```bash
 # any static server from the repo root, e.g.
@@ -42,6 +48,6 @@ Example:
 2. Keep descriptions factual and short; no affiliate links.
 3. Open a pull request. Nothing is published until a maintainer merges it.
 
-## Categories in the starter catalog
+## Categories
 
 Reference · Learning · Everyday tools · Developers · Design · Privacy · Maps and weather · News · Science
