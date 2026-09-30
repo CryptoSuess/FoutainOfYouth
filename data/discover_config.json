@@ -31,9 +31,27 @@
     "https://news.ycombinator.com/",
     "https://www.producthunt.com/"
   ],
-  "ollama": {
-    "base_url": "http://127.0.0.1:11434",
-    "model": "llama3.2",
-    "enabled": true
+  "local_ai": {
+    "enabled": true,
+    "provider": "auto",
+    "model": "",
+    "api_key": "",
+    "endpoints": [
+      {
+        "name": "ollama",
+        "provider": "ollama",
+        "base_url": "http://127.0.0.1:11434"
+      },
+      {
+        "name": "lm-studio",
+        "provider": "openai",
+        "base_url": "http://127.0.0.1:1234/v1"
+      },
+      {
+        "name": "openai-compatible",
+        "provider": "openai",
+        "base_url": "http://127.0.0.1:8080/v1"
+      }
+    ]
   }
 }

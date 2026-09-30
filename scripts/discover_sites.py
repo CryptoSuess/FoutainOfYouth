@@ -4,7 +4,7 @@
 Sources:
   - GitHub Search API via `gh`
   - Optional homepage URLs from matching repos
-  - Optional local Ollama model for ranking + short descriptions
+  - Optional local AI (Ollama, LM Studio, or any OpenAI-compatible server)
 
 Nothing is published automatically. Candidates land in data/suggestions.json
 with status=pending for human approval.
@@ -140,16 +140,94 @@ def guess_category(text: str, categories: list[str]) -> str:
     return "Developers" if "Developers" in categories else categories[0]
 
 
-def ollama_available(base_url: str) -> bool:
-    try:
-        with urllib.request.urlopen(base_url.rstrip("/") + "/api/tags", timeout=2) as resp:
-            return resp.status == 200
-    except Exception:
-        return False
+def http_json(url: str, payload: dict | None = None, headers: dict | None = None, timeout: float = 60.0):
+    data = None if payload is None else json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={"Content-Type": "application/json", **(headers or {})},
+        method="GET" if payload is None else "POST",
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
-def ollama_enrich(candidate: dict, categories: list[str], base_url: str, model: str) -> dict:
-    prompt = f"""You help curate a public library of useful websites.
+def list_ollama_models(base_url: str) -> list[str]:
+    data = http_json(base_url.rstrip("/") + "/api/tags", timeout=2.0)
+    return [m.get("name") for m in data.get("models", []) if m.get("name")]
+
+
+def list_openai_models(base_url: str, api_key: str = "") -> list[str]:
+    data = http_json(
+        base_url.rstrip("/") + "/models",
+        headers={"Authorization": f"Bearer {api_key or 'local'}"},
+        timeout=2.0,
+    )
+    models = data.get("data") or data.get("models") or []
+    names = []
+    for item in models:
+        if isinstance(item, str):
+            names.append(item)
+        elif isinstance(item, dict) and item.get("id"):
+            names.append(item["id"])
+    return names
+
+
+def resolve_local_ai(config: dict) -> dict | None:
+    """Pick a reachable local AI endpoint from config."""
+    local_ai = config.get("local_ai")
+    if not local_ai and config.get("ollama"):
+        # Backward compatible
+        ollama = config["ollama"]
+        local_ai = {
+            "enabled": ollama.get("enabled", True),
+            "provider": "ollama",
+            "model": ollama.get("model", ""),
+            "endpoints": [
+                {
+                    "name": "ollama",
+                    "provider": "ollama",
+                    "base_url": ollama.get("base_url", "http://127.0.0.1:11434"),
+                }
+            ],
+        }
+    if not local_ai or not local_ai.get("enabled", True):
+        return None
+
+    preferred_model = (local_ai.get("model") or "").strip()
+    api_key = local_ai.get("api_key") or ""
+    endpoints = local_ai.get("endpoints") or []
+
+    for endpoint in endpoints:
+        base_url = (endpoint.get("base_url") or "").rstrip("/")
+        if not base_url:
+            continue
+        provider = (endpoint.get("provider") or local_ai.get("provider") or "auto").lower()
+        if provider == "auto":
+            provider = "ollama" if base_url.endswith(":11434") else "openai"
+        try:
+            if provider == "ollama":
+                models = list_ollama_models(base_url)
+            else:
+                models = list_openai_models(base_url, api_key)
+        except Exception:
+            continue
+        if not models:
+            continue
+        model = preferred_model if preferred_model in models else models[0]
+        return {
+            "name": endpoint.get("name") or provider,
+            "provider": provider,
+            "base_url": base_url,
+            "model": model,
+            "api_key": api_key,
+            "models": models,
+        }
+    return None
+
+
+def enrichment_prompt(candidate: dict, categories: list[str]) -> str:
+    return f"""You help curate a public library of useful websites.
 Return ONLY compact JSON with keys: keep (boolean), category (one of {categories}), description (one short factual sentence <= 140 chars), tags (array of 3-5 lowercase keywords), reason (short why keep/reject).
 
 Candidate:
@@ -159,29 +237,25 @@ source: {candidate.get('source_repo')}
 stars: {candidate.get('stars')}
 raw_description: {candidate.get('raw_description')}
 """
-    body = json.dumps(
-        {
-            "model": model,
-            "prompt": prompt,
-            "stream": False,
-            "format": "json",
-        }
-    ).encode("utf-8")
-    req = urllib.request.Request(
-        base_url.rstrip("/") + "/api/generate",
-        data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
-        raw = payload.get("response", "{}")
-        data = json.loads(raw) if isinstance(raw, str) else raw
-    except Exception as exc:
-        candidate["ai"] = {"error": str(exc)}
-        return candidate
 
+
+def parse_model_json(raw: str) -> dict:
+    raw = (raw or "").strip()
+    if not raw:
+        return {}
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", raw, re.S)
+        if not match:
+            return {}
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError:
+            return {}
+
+
+def apply_ai_decision(candidate: dict, data: dict, categories: list[str], model: str, provider: str) -> dict:
     if data.get("keep") is False:
         candidate["status"] = "rejected"
         candidate["reject_reason"] = data.get("reason") or "Rejected by local AI"
@@ -197,8 +271,66 @@ raw_description: {candidate.get('raw_description')}
                 tags.append(cleaned)
         if tags:
             candidate["tags"] = tags
-    candidate["ai"] = {"model": model, "reason": data.get("reason")}
+    candidate["ai"] = {
+        "provider": provider,
+        "model": model,
+        "reason": data.get("reason"),
+    }
     return candidate
+
+
+def local_ai_enrich(candidate: dict, categories: list[str], ai: dict) -> dict:
+    prompt = enrichment_prompt(candidate, categories)
+    provider = ai["provider"]
+    model = ai["model"]
+    base_url = ai["base_url"]
+
+    try:
+        if provider == "ollama":
+            payload = http_json(
+                base_url.rstrip("/") + "/api/generate",
+                {
+                    "model": model,
+                    "prompt": prompt,
+                    "stream": False,
+                    "format": "json",
+                },
+                timeout=90.0,
+            )
+            data = parse_model_json(payload.get("response", "{}"))
+        else:
+            payload = http_json(
+                base_url.rstrip("/") + "/chat/completions",
+                {
+                    "model": model,
+                    "temperature": 0.2,
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "Return only valid JSON. No markdown.",
+                        },
+                        {"role": "user", "content": prompt},
+                    ],
+                    "response_format": {"type": "json_object"},
+                },
+                headers={"Authorization": f"Bearer {ai.get('api_key') or 'local'}"},
+                timeout=90.0,
+            )
+            content = payload["choices"][0]["message"]["content"]
+            data = parse_model_json(content)
+    except Exception as exc:
+        candidate["ai"] = {"error": str(exc), "provider": provider, "model": model}
+        return candidate
+
+    if not data:
+        candidate["ai"] = {
+            "error": "Model returned non-JSON output",
+            "provider": provider,
+            "model": model,
+        }
+        return candidate
+
+    return apply_ai_decision(candidate, data, categories, model, provider)
 
 
 SKIP_HOMEPAGE_HOSTS = {
@@ -272,7 +404,7 @@ def repo_to_candidate(repo: dict, categories: list[str], min_stars: int, used_id
     }
 
 
-def discover(config: dict, use_ollama: bool, limit: int | None):
+def discover(config: dict, use_local_ai: bool, limit: int | None):
     urls, ids = existing_urls_and_ids()
     min_stars = int(config.get("min_stars", 1500))
     max_per_query = int(config.get("max_per_query", 8))
@@ -311,18 +443,26 @@ def discover(config: dict, use_ollama: bool, limit: int | None):
     found.sort(key=lambda c: c.get("score", 0), reverse=True)
     found = found[:max_suggestions]
 
-    ollama_cfg = config.get("ollama") or {}
-    if use_ollama and ollama_cfg.get("enabled", True):
-        base_url = ollama_cfg.get("base_url", "http://127.0.0.1:11434")
-        model = ollama_cfg.get("model", "llama3.2")
-        if ollama_available(base_url):
-            print(f"Enriching with local Ollama model `{model}`…", file=sys.stderr)
+    if use_local_ai:
+        ai = resolve_local_ai(config)
+        if ai:
+            print(
+                f"Enriching with local AI `{ai['model']}` via {ai['name']} ({ai['provider']})…",
+                file=sys.stderr,
+            )
             enriched = []
             for candidate in found:
-                enriched.append(ollama_enrich(candidate, categories, base_url, model))
+                enriched.append(local_ai_enrich(candidate, categories, ai))
             found = [c for c in enriched if c.get("status") != "rejected"]
         else:
-            print("Ollama not reachable; using heuristic ranking only.", file=sys.stderr)
+            print(
+                "No local AI server found; using heuristic ranking only.",
+                file=sys.stderr,
+            )
+            print(
+                "Tip: run `python3 scripts/check_local_ai.py` on your PC while Ollama/LM Studio is up.",
+                file=sys.stderr,
+            )
 
     # Ensure tags exist
     for candidate in found:
@@ -404,12 +544,17 @@ def merge_suggestions(new_items: list[dict]) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit", type=int, default=None, help="Max new suggestions to keep")
-    parser.add_argument("--no-ollama", action="store_true", help="Skip local AI enrichment")
+    parser.add_argument(
+        "--no-ai",
+        "--no-ollama",
+        action="store_true",
+        help="Skip local AI enrichment (heuristics only)",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Print candidates without writing")
     args = parser.parse_args()
 
     config = load_json(CONFIG_PATH, {})
-    found = discover(config, use_ollama=not args.no_ollama, limit=args.limit)
+    found = discover(config, use_local_ai=not args.no_ai, limit=args.limit)
     print(f"Discovered {len(found)} candidate(s).", file=sys.stderr)
 
     if args.dry_run:

@@ -50,14 +50,26 @@ Example:
 
 ## Discover sites with the local agent
 
-Fountain of Youth includes a small discovery agent that crawls GitHub (and optional seed URLs) for cool candidates, optionally ranks them with a **local Ollama** model, and writes them to [`data/suggestions.json`](data/suggestions.json) for your approval.
+Fountain of Youth includes a small discovery agent that crawls GitHub for cool candidates, ranks them with the **AI models already on your PC**, and writes them to [`data/suggestions.json`](data/suggestions.json) for your approval.
+
+Works with whatever you already run locally:
+
+- **Ollama** → `http://127.0.0.1:11434`
+- **LM Studio** → `http://127.0.0.1:1234/v1`
+- Any other **OpenAI-compatible** local server
 
 ```bash
-# 1) Find candidates (uses `gh` auth; skips sites already in the library)
+# 0) Confirm your PC models are visible
+python3 scripts/check_local_ai.py
+
+# Optional: pin a model in data/discover_config.json → local_ai.model
+# e.g. "llama3.2", "qwen2.5", "mistral", or whatever check_local_ai lists
+
+# 1) Find + rank candidates (uses `gh` auth + your local model)
 python3 scripts/discover_sites.py
 
-# Optional: skip local AI, or limit results
-python3 scripts/discover_sites.py --no-ollama --limit 15
+# Heuristics only / limit results
+python3 scripts/discover_sites.py --no-ai --limit 15
 
 # 2) Review the queue
 python3 scripts/review_suggestions.py pending
@@ -70,11 +82,13 @@ python3 scripts/review_suggestions.py reject noisy-id --reason "too niche"
 python3 scripts/promote_suggestions.py
 ```
 
-Config lives in [`data/discover_config.json`](data/discover_config.json) (GitHub queries, star floor, Ollama model).
+Config: [`data/discover_config.json`](data/discover_config.json)
 
-Local AI: if [Ollama](https://ollama.com/) is running at `http://127.0.0.1:11434`, discovery will ask it to keep/reject candidates and rewrite short descriptions. If Ollama is offline, heuristic scoring still works.
+- `github_queries` — what to crawl
+- `local_ai.endpoints` — where your models live
+- `local_ai.model` — leave blank to auto-pick the first available model
 
-A weekly GitHub Action (`.github/workflows/discover-sites.yml`) can refresh suggestions on a schedule — still human-approved before anything is promoted.
+A weekly GitHub Action can refresh suggestions without local AI; on your PC, leave Ollama/LM Studio running and discovery will use it automatically.
 
 ## Categories
 
