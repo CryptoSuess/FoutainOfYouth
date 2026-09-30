@@ -48,6 +48,34 @@ Example:
 2. Keep descriptions factual and short; no affiliate links.
 3. Open a pull request. Nothing is published until a maintainer merges it.
 
+## Discover sites with the local agent
+
+Fountain of Youth includes a small discovery agent that crawls GitHub (and optional seed URLs) for cool candidates, optionally ranks them with a **local Ollama** model, and writes them to [`data/suggestions.json`](data/suggestions.json) for your approval.
+
+```bash
+# 1) Find candidates (uses `gh` auth; skips sites already in the library)
+python3 scripts/discover_sites.py
+
+# Optional: skip local AI, or limit results
+python3 scripts/discover_sites.py --no-ollama --limit 15
+
+# 2) Review the queue
+python3 scripts/review_suggestions.py pending
+
+# 3) Approve / reject
+python3 scripts/review_suggestions.py approve some-id another-id
+python3 scripts/review_suggestions.py reject noisy-id --reason "too niche"
+
+# 4) Promote approved entries into the live catalog
+python3 scripts/promote_suggestions.py
+```
+
+Config lives in [`data/discover_config.json`](data/discover_config.json) (GitHub queries, star floor, Ollama model).
+
+Local AI: if [Ollama](https://ollama.com/) is running at `http://127.0.0.1:11434`, discovery will ask it to keep/reject candidates and rewrite short descriptions. If Ollama is offline, heuristic scoring still works.
+
+A weekly GitHub Action (`.github/workflows/discover-sites.yml`) can refresh suggestions on a schedule — still human-approved before anything is promoted.
+
 ## Categories
 
 Reference · Learning · Everyday tools · Developers · Design · Privacy · Maps and weather · News · Science · Crypto

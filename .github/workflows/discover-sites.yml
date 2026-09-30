@@ -1,0 +1,39 @@
+name: Discover site suggestions
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays 15:00 UTC
+    - cron: "0 15 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover candidates
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/discover_sites.py --no-ollama --limit 20
+
+      - name: Commit suggestions
+        run: |
+          if git diff --quiet -- data/suggestions.json; then
+            echo "No suggestion changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/suggestions.json
+          git commit -m "Refresh discovered site suggestions"
+          git push

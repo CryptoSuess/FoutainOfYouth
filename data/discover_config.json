@@ -1,0 +1,39 @@
+{
+  "min_stars": 1500,
+  "max_per_query": 8,
+  "max_suggestions": 25,
+  "categories": [
+    "Reference",
+    "Learning",
+    "Everyday tools",
+    "Developers",
+    "Design",
+    "Privacy",
+    "Maps and weather",
+    "News",
+    "Science",
+    "Crypto"
+  ],
+  "github_queries": [
+    "awesome ai agents stars:>2000",
+    "topic:artificial-intelligence stars:>5000",
+    "topic:developer-tools stars:>5000",
+    "topic:web-scraping stars:>3000",
+    "topic:privacy stars:>3000",
+    "awesome list stars:>10000",
+    "claude code skills stars:>1000",
+    "topic:mcp-server stars:>1000",
+    "open source learning stars:>5000",
+    "topic:design-tools stars:>3000"
+  ],
+  "seed_urls": [
+    "https://github.com/trending",
+    "https://news.ycombinator.com/",
+    "https://www.producthunt.com/"
+  ],
+  "ollama": {
+    "base_url": "http://127.0.0.1:11434",
+    "model": "llama3.2",
+    "enabled": true
+  }
+}

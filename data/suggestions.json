@@ -1,0 +1,258 @@
+{
+  "generated_at": "2026-09-30T00:28:14.610452+00:00",
+  "notes": "Set status to approved or rejected. Run scripts/promote_suggestions.py to merge approved entries into sites.json.",
+  "suggestions": [
+    {
+      "id": "significant-gravitas-autogpt",
+      "name": "AutoGPT",
+      "url": "https://agpt.co",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "category": "Developers",
+      "tags": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 187620,
+      "source_repo": "https://github.com/Significant-Gravitas/AutoGPT",
+      "raw_description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857548+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "github-awesome-copilot",
+      "name": "Awesome Copilot",
+      "url": "https://awesome-copilot.github.com/",
+      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "category": "Developers",
+      "tags": [
+        "agent-skills",
+        "agents",
+        "ai",
+        "awesome"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 39511,
+      "source_repo": "https://github.com/github/awesome-copilot",
+      "raw_description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.414826+00:00",
+      "query": "awesome ai agents stars:>2000"
+    },
+    {
+      "id": "enescingoz-awesome-n8n-templates",
+      "name": "Awesome N8n Templates",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "description": "280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG chatbots, email au",
+      "category": "Developers",
+      "tags": [
+        "ai-agents",
+        "ai-automation",
+        "automation",
+        "automation-templates"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 25656,
+      "source_repo": "https://github.com/enescingoz/awesome-n8n-templates",
+      "raw_description": "280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG   chatbots, email automation, social media, DevOps, and document processing. The largest open-source n8n template collection.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.414952+00:00",
+      "query": "awesome ai agents stars:>2000"
+    },
+    {
+      "id": "thedotmack-claude-mem",
+      "name": "Claude Mem",
+      "url": "https://claude-mem.ai",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessi",
+      "category": "Developers",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 94949,
+      "source_repo": "https://github.com/thedotmack/claude-mem",
+      "raw_description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857741+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "hacksider-deep-live-cam",
+      "name": "Deep Live Cam",
+      "url": "https://deeplivecam.net/",
+      "description": "real time face swap and one-click video deepfake with only a single image",
+      "category": "Developers",
+      "tags": [
+        "ai",
+        "ai-deep-fake",
+        "ai-face",
+        "ai-webcam"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 96883,
+      "source_repo": "https://github.com/hacksider/Deep-Live-Cam",
+      "raw_description": "real time face swap and one-click video deepfake with only a single image",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857689+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "affaan-m-ecc",
+      "name": "ECC",
+      "url": "https://ecc.tools",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "category": "Developers",
+      "tags": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 269652,
+      "source_repo": "https://github.com/affaan-m/ECC",
+      "raw_description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:11.358854+00:00",
+      "query": "topic:developer-tools stars:>5000"
+    },
+    {
+      "id": "rasbt-llms-from-scratch",
+      "name": "LLMs From Scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "category": "Developers",
+      "tags": [
+        "ai",
+        "artificial-intelligence",
+        "attention-mechanism",
+        "deep-learning"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 105761,
+      "source_repo": "https://github.com/rasbt/LLMs-from-scratch",
+      "raw_description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857647+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "openhands-openhands",
+      "name": "OpenHands",
+      "url": "https://openhands.dev",
+      "description": "🙌 OpenHands: AI-Driven Development",
+      "category": "Developers",
+      "tags": [
+        "agent",
+        "artificial-intelligence",
+        "chatgpt",
+        "claude-ai"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 89544,
+      "source_repo": "https://github.com/OpenHands/OpenHands",
+      "raw_description": "🙌 OpenHands: AI-Driven Development",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857780+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "graphify-labs-graphify",
+      "name": "graphify",
+      "url": "https://www.graphify.com",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local determin",
+      "category": "Developers",
+      "tags": [
+        "ai-agents",
+        "antigravity",
+        "ast",
+        "claude-code"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 122474,
+      "source_repo": "https://github.com/Graphify-Labs/graphify",
+      "raw_description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:11.358947+00:00",
+      "query": "topic:developer-tools stars:>5000"
+    },
+    {
+      "id": "dietrichgebert-ponytail",
+      "name": "ponytail",
+      "url": "https://ponytail.dev",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "category": "Developers",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 148225,
+      "source_repo": "https://github.com/DietrichGebert/ponytail",
+      "raw_description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:11.358904+00:00",
+      "query": "topic:developer-tools stars:>5000"
+    },
+    {
+      "id": "f-prompts-chat",
+      "name": "prompts.chat",
+      "url": "https://prompts.chat",
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "category": "Privacy",
+      "tags": [
+        "ai",
+        "artificial-intelligence",
+        "awesome-list",
+        "chatgpt"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 171616,
+      "source_repo": "https://github.com/f/prompts.chat",
+      "raw_description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857603+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "usestrix-strix",
+      "name": "strix",
+      "url": "https://strix.ai",
+      "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+      "category": "Developers",
+      "tags": [
+        "agents",
+        "ai-hacking",
+        "ai-penetration-testing",
+        "ai-pentesting"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 65584,
+      "source_repo": "https://github.com/usestrix/strix",
+      "raw_description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:28:10.857851+00:00",
+      "query": "topic:artificial-intelligence stars:>5000"
+    }
+  ]
+}
