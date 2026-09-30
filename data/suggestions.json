@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T00:28:14.610452+00:00",
+  "generated_at": "2026-09-30T00:50:46.526872+00:00",
   "notes": "Set status to approved or rejected. Run scripts/promote_suggestions.py to merge approved entries into sites.json.",
   "suggestions": [
     {
@@ -192,6 +192,27 @@
       "query": "topic:developer-tools stars:>5000"
     },
     {
+      "id": "hoppscotch-hoppscotch",
+      "name": "hoppscotch",
+      "url": "https://hoppscotch.io",
+      "description": "Open-Source API Development Ecosystem • https://hoppscotch.io • Offline, On-Prem & Cloud • Web, Desktop & CLI • Open-Source Alternative to Postman, Insomnia",
+      "category": "Developers",
+      "tags": [
+        "api",
+        "api-client",
+        "api-rest",
+        "api-testing"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 80552,
+      "source_repo": "https://github.com/hoppscotch/hoppscotch",
+      "raw_description": "Open-Source API Development Ecosystem • https://hoppscotch.io • Offline, On-Prem & Cloud • Web, Desktop & CLI • Open-Source Alternative to Postman, Insomnia",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:50:42.808322+00:00",
+      "query": "topic:developer-tools stars:>5000"
+    },
+    {
       "id": "dietrichgebert-ponytail",
       "name": "ponytail",
       "url": "https://ponytail.dev",
@@ -232,6 +253,48 @@
       "discovered_from": "github_search",
       "discovered_at": "2026-09-30T00:28:10.857603+00:00",
       "query": "topic:artificial-intelligence stars:>5000"
+    },
+    {
+      "id": "puppeteer-puppeteer",
+      "name": "puppeteer",
+      "url": "https://pptr.dev",
+      "description": "JavaScript API for Chrome and Firefox",
+      "category": "Developers",
+      "tags": [
+        "automation",
+        "chrome",
+        "chromium",
+        "developer-tools"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 95638,
+      "source_repo": "https://github.com/puppeteer/puppeteer",
+      "raw_description": "JavaScript API for Chrome and Firefox",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:50:42.808212+00:00",
+      "query": "topic:developer-tools stars:>5000"
+    },
+    {
+      "id": "rtk-ai-rtk",
+      "name": "rtk",
+      "url": "https://www.rtk-ai.app",
+      "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+      "category": "Developers",
+      "tags": [
+        "agentic-coding",
+        "ai-coding",
+        "anthropic",
+        "claude-code"
+      ],
+      "status": "pending",
+      "score": 14.0,
+      "stars": 82027,
+      "source_repo": "https://github.com/rtk-ai/rtk",
+      "raw_description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+      "discovered_from": "github_search",
+      "discovered_at": "2026-09-30T00:50:42.808280+00:00",
+      "query": "topic:developer-tools stars:>5000"
     },
     {
       "id": "usestrix-strix",
