@@ -510,5 +510,189 @@
     "description": "Space exploration news, imagery, and science from NASA.",
     "category": "Science",
     "tags": ["space", "science", "images"]
+  },
+  {
+    "id": "wshobson",
+    "name": "wshobson (Seth Hobson)",
+    "url": "https://github.com/wshobson",
+    "description": "GitHub profile for Seth Hobson — AI engineering and agent tooling.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "tools", "github"]
+  },
+  {
+    "id": "multica",
+    "name": "Multica",
+    "url": "https://github.com/multica-ai/multica",
+    "description": "Open-source platform for humans and AI agents to work as one team.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "collaboration", "open-source"]
+  },
+  {
+    "id": "baseten",
+    "name": "Baseten",
+    "url": "https://www.baseten.co/",
+    "description": "Inference platform for deploying and scaling AI models in production.",
+    "category": "Developers",
+    "tags": ["ml", "inference", "deploy", "models"]
+  },
+  {
+    "id": "lancedb",
+    "name": "LanceDB",
+    "url": "https://github.com/lancedb/lancedb",
+    "description": "Developer-friendly embedded retrieval library for multimodal AI search.",
+    "category": "Developers",
+    "tags": ["ai", "vector", "database", "retrieval"]
+  },
+  {
+    "id": "ethers-js",
+    "name": "ethers.js",
+    "url": "https://github.com/ethers-io/ethers.js",
+    "description": "Complete Ethereum library and wallet implementation in JavaScript.",
+    "category": "Crypto",
+    "tags": ["ethereum", "web3", "javascript", "wallet"]
+  },
+  {
+    "id": "sglang",
+    "name": "SGLang",
+    "url": "https://github.com/sgl-project/sglang",
+    "description": "High-performance serving framework for large language and multimodal models.",
+    "category": "Developers",
+    "tags": ["llm", "inference", "serving", "ai"]
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "url": "https://github.com/vllm-project/vllm",
+    "description": "High-throughput, memory-efficient inference and serving engine for LLMs.",
+    "category": "Developers",
+    "tags": ["llm", "inference", "serving", "ai"]
+  },
+  {
+    "id": "claw-compactor",
+    "name": "Claw Compactor",
+    "url": "https://github.com/open-compress/claw-compactor",
+    "description": "LLM token compression pipeline with AST-aware code analysis — zero inference cost.",
+    "category": "Developers",
+    "tags": ["llm", "compression", "tokens", "cli"]
+  },
+  {
+    "id": "agency-agents",
+    "name": "Agency Agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A full AI agency of specialized agents with personalities, processes, and deliverables.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "skills", "workflows"]
+  },
+  {
+    "id": "thirdweb-js",
+    "name": "thirdweb JS",
+    "url": "https://github.com/thirdweb-dev/js",
+    "description": "Web3 SDKs for browser, Node, and mobile apps.",
+    "category": "Crypto",
+    "tags": ["web3", "sdk", "javascript", "ethereum"]
+  },
+  {
+    "id": "qwq",
+    "name": "QwQ",
+    "url": "https://github.com/QwenLM/QwQ",
+    "description": "Reasoning model series from the Qwen team at Alibaba Cloud.",
+    "category": "Developers",
+    "tags": ["llm", "reasoning", "qwen", "ai"]
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek-R1",
+    "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "description": "DeepSeek's open reasoning model release and research artifacts.",
+    "category": "Developers",
+    "tags": ["llm", "reasoning", "deepseek", "ai"]
+  },
+  {
+    "id": "areal",
+    "name": "AReaL",
+    "url": "https://github.com/areal-project/AReaL",
+    "description": "Simple, flexible RL bridge for LLM-based agent applications.",
+    "category": "Developers",
+    "tags": ["rl", "agents", "llm", "training"]
+  },
+  {
+    "id": "camel-ai",
+    "name": "CAMEL",
+    "url": "https://github.com/camel-ai/camel",
+    "description": "Multi-agent framework for finding the scaling laws of agents.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "multi-agent", "framework"]
+  },
+  {
+    "id": "asearcher",
+    "name": "ASearcher",
+    "url": "https://github.com/inclusionAI/ASearcher",
+    "description": "Open-source large-scale reinforcement learning project for search agents.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "search", "rl"]
+  },
+  {
+    "id": "asearcher-hf",
+    "name": "ASearcher (Hugging Face)",
+    "url": "https://huggingface.co/collections/inclusionAI/asearcher",
+    "description": "Hugging Face collection for InclusionAI ASearcher models and artifacts.",
+    "category": "Developers",
+    "tags": ["ai", "models", "huggingface", "search"]
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "url": "https://github.com/ollama/ollama",
+    "description": "Run Kimi, DeepSeek, Qwen, Gemma, and other models locally.",
+    "category": "Developers",
+    "tags": ["llm", "local", "models", "ai"]
+  },
+  {
+    "id": "ollama-library",
+    "name": "Ollama Library",
+    "url": "https://ollama.com/library",
+    "description": "Browse and pull models available for Ollama.",
+    "category": "Developers",
+    "tags": ["llm", "models", "local", "catalog"]
+  },
+  {
+    "id": "e2b",
+    "name": "E2B",
+    "url": "https://github.com/e2b-dev/E2B",
+    "description": "Open-source secure sandboxes with real-world tools for AI agents.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "sandbox", "infra"]
+  },
+  {
+    "id": "instructor",
+    "name": "Instructor",
+    "url": "https://github.com/567-labs/instructor",
+    "description": "Structured outputs for LLMs.",
+    "category": "Developers",
+    "tags": ["llm", "structured-output", "python", "ai"]
+  },
+  {
+    "id": "21st-dev",
+    "name": "21st.dev",
+    "url": "https://21st.dev/",
+    "description": "Registry of React UI components, templates, and themes for modern product interfaces.",
+    "category": "Design",
+    "tags": ["ui", "components", "react", "design"]
+  },
+  {
+    "id": "coss-ui",
+    "name": "coss.com UI",
+    "url": "https://coss.com/ui",
+    "description": "Modern UI component library docs built on Base UI.",
+    "category": "Design",
+    "tags": ["ui", "components", "docs", "design"]
+  },
+  {
+    "id": "magicui",
+    "name": "Magic UI",
+    "url": "https://magicui.design/",
+    "description": "Animated UI components and templates for modern web interfaces.",
+    "category": "Design",
+    "tags": ["ui", "components", "animation", "design"]
   }
 ]
