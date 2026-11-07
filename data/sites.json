@@ -694,5 +694,85 @@
     "description": "Animated UI components and templates for modern web interfaces.",
     "category": "Design",
     "tags": ["ui", "components", "animation", "design"]
+  },
+  {
+    "id": "open-creator",
+    "name": "OpenCreator",
+    "url": "https://github.com/krillinai/OpenCreator",
+    "description": "Open-source AI workspace for creators — video translation, dubbing, and social media content tools.",
+    "category": "Design",
+    "tags": ["ai", "video", "creators", "translation"]
+  },
+  {
+    "id": "social-media-research-skills",
+    "name": "Social Media Research Skills",
+    "url": "https://github.com/ScrapeCreators/social-media-research-skills",
+    "description": "AI agent skills for social research — outliers, comments, ads, and trends across major platforms.",
+    "category": "Developers",
+    "tags": ["ai", "social", "research", "skills"]
+  },
+  {
+    "id": "local-deep-research",
+    "name": "Local Deep Research",
+    "url": "https://github.com/LearningCircuit/local-deep-research",
+    "description": "Local deep-research agent with many search backends and support for local or cloud LLMs.",
+    "category": "Developers",
+    "tags": ["ai", "research", "local", "llm"]
+  },
+  {
+    "id": "flux2",
+    "name": "FLUX.2",
+    "url": "https://github.com/black-forest-labs/flux2",
+    "description": "Official inference repo for Black Forest Labs FLUX.2 image models.",
+    "category": "Design",
+    "tags": ["ai", "images", "diffusion", "models"]
+  },
+  {
+    "id": "kokoro",
+    "name": "Kokoro",
+    "url": "https://github.com/hexgrad/kokoro",
+    "description": "Lightweight open TTS model (Kokoro-82M) for local speech generation.",
+    "category": "Developers",
+    "tags": ["ai", "tts", "audio", "local"]
+  },
+  {
+    "id": "ace-step",
+    "name": "ACE-Step 1.5",
+    "url": "https://github.com/ace-step/ACE-Step-1.5",
+    "description": "Powerful local music generation model that runs on Mac, AMD, Intel, and CUDA.",
+    "category": "Design",
+    "tags": ["ai", "music", "audio", "local"]
+  },
+  {
+    "id": "short-video-factory",
+    "name": "Short Video Factory",
+    "url": "https://github.com/YILS-LIN/short-video-factory",
+    "description": "Desktop tool for AI batch clipping and one-click marketing or content short videos.",
+    "category": "Design",
+    "tags": ["ai", "video", "shorts", "editing"]
+  },
+  {
+    "id": "ai-youtube-shorts-generator",
+    "name": "AI YouTube Shorts Generator",
+    "url": "https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator",
+    "description": "Turn long YouTube videos into vertical shorts with LLM highlights and Whisper — free and open source.",
+    "category": "Design",
+    "tags": ["ai", "youtube", "shorts", "video"]
+  },
+  {
+    "id": "open-deep-research",
+    "name": "Open Deep Research",
+    "url": "https://github.com/langchain-ai/open_deep_research",
+    "description": "LangChain's open deep-research agent for multi-step web investigation with LLMs.",
+    "category": "Developers",
+    "tags": ["ai", "research", "langchain", "agents"]
+  },
+  {
+    "id": "gpt-researcher",
+    "name": "GPT Researcher",
+    "url": "https://github.com/assafelovic/gpt-researcher",
+    "description": "Autonomous agent that runs deep research on any topic using your choice of LLM providers.",
+    "category": "Developers",
+    "tags": ["ai", "research", "agents", "llm"]
   }
 ]
