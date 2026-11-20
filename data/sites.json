@@ -830,5 +830,389 @@
     "description": "Turn a codebase, docs, schemas, and PDFs into a queryable knowledge graph for coding agents.",
     "category": "Developers",
     "tags": ["knowledge-graph", "agents", "codebase", "skills"]
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "url": "https://github.com/n8n-io/n8n",
+    "description": "Fair-code workflow automation with native AI, 400+ integrations, self-host or cloud.",
+    "category": "Everyday tools",
+    "tags": ["automation", "workflows", "self-hosted", "ai"]
+  },
+  {
+    "id": "open-webui",
+    "name": "Open WebUI",
+    "url": "https://github.com/open-webui/open-webui",
+    "description": "User-friendly web UI for chatting with Ollama, OpenAI-compatible APIs, and local models.",
+    "category": "Developers",
+    "tags": ["llm", "ollama", "chat", "self-hosted"]
+  },
+  {
+    "id": "immich",
+    "name": "Immich",
+    "url": "https://github.com/immich-app/immich",
+    "description": "High-performance self-hosted photo and video management.",
+    "category": "Everyday tools",
+    "tags": ["photos", "self-hosted", "privacy", "media"]
+  },
+  {
+    "id": "stirling-pdf",
+    "name": "Stirling PDF",
+    "url": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "description": "Self-hosted PDF editor and toolkit that works in the browser.",
+    "category": "Everyday tools",
+    "tags": ["pdf", "self-hosted", "tools"]
+  },
+  {
+    "id": "uptime-kuma",
+    "name": "Uptime Kuma",
+    "url": "https://github.com/louislam/uptime-kuma",
+    "description": "Fancy self-hosted uptime monitoring with alerts and status pages.",
+    "category": "Everyday tools",
+    "tags": ["monitoring", "self-hosted", "uptime"]
+  },
+  {
+    "id": "syncthing",
+    "name": "Syncthing",
+    "url": "https://github.com/syncthing/syncthing",
+    "description": "Continuous peer-to-peer file synchronization with no central server.",
+    "category": "Everyday tools",
+    "tags": ["sync", "privacy", "self-hosted", "files"]
+  },
+  {
+    "id": "jellyfin",
+    "name": "Jellyfin",
+    "url": "https://github.com/jellyfin/jellyfin",
+    "description": "Free software media system for streaming your movies, TV, and music.",
+    "category": "Everyday tools",
+    "tags": ["media", "streaming", "self-hosted"]
+  },
+  {
+    "id": "home-assistant",
+    "name": "Home Assistant",
+    "url": "https://github.com/home-assistant/core",
+    "description": "Open-source home automation that puts local control and privacy first.",
+    "category": "Everyday tools",
+    "tags": ["home-automation", "iot", "self-hosted", "privacy"]
+  },
+  {
+    "id": "netdata",
+    "name": "Netdata",
+    "url": "https://github.com/netdata/netdata",
+    "description": "Real-time observability for metrics, logs, traces, and infrastructure.",
+    "category": "Developers",
+    "tags": ["monitoring", "observability", "self-hosted"]
+  },
+  {
+    "id": "awesome-selfhosted",
+    "name": "Awesome Self-Hosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "Curated list of free software network services you can host yourself.",
+    "category": "Reference",
+    "tags": ["self-hosted", "awesome-list", "open-source"]
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "url": "https://github.com/comfyanonymous/ComfyUI",
+    "description": "Node-based UI for powerful and modular stable diffusion / generative workflows.",
+    "category": "Design",
+    "tags": ["ai", "images", "diffusion", "workflows"]
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "url": "https://github.com/Aider-AI/aider",
+    "description": "AI pair programmer that edits code in your local git repo from the terminal.",
+    "category": "Developers",
+    "tags": ["ai", "coding", "cli", "git"]
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "url": "https://github.com/langgenius/dify",
+    "description": "Open-source LLM app platform for agents, RAG pipelines, and workflow orchestration.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "rag", "platform"]
+  },
+  {
+    "id": "browser-use",
+    "name": "Browser Use",
+    "url": "https://github.com/browser-use/browser-use",
+    "description": "Make AI agents control a real browser to automate web tasks.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "browser", "automation"]
+  },
+  {
+    "id": "crawl4ai",
+    "name": "Crawl4AI",
+    "url": "https://github.com/unclecode/crawl4ai",
+    "description": "Open-source LLM-friendly web crawler and scraper.",
+    "category": "Developers",
+    "tags": ["scraping", "crawler", "ai", "llm"]
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "url": "https://github.com/mendableai/firecrawl",
+    "description": "API and open-source crawler that turns websites into clean LLM-ready markdown.",
+    "category": "Developers",
+    "tags": ["scraping", "crawler", "ai", "markdown"]
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "url": "https://github.com/openai/whisper",
+    "description": "OpenAI's general-purpose speech recognition model, runnable locally.",
+    "category": "Developers",
+    "tags": ["ai", "speech", "transcription", "audio"]
+  },
+  {
+    "id": "unsloth",
+    "name": "Unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "description": "Faster, memory-efficient fine-tuning and local UI for LLMs and diffusion models.",
+    "category": "Developers",
+    "tags": ["llm", "finetuning", "local", "ai"]
+  },
+  {
+    "id": "chrome-devtools-mcp",
+    "name": "Chrome DevTools MCP",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "description": "Chrome DevTools Protocol tools exposed for coding agents via MCP.",
+    "category": "Developers",
+    "tags": ["mcp", "chrome", "devtools", "agents"]
+  },
+  {
+    "id": "gemini-cli",
+    "name": "Gemini CLI",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "description": "Open-source AI agent that brings Gemini into your terminal.",
+    "category": "Developers",
+    "tags": ["ai", "cli", "gemini", "agents"]
+  },
+  {
+    "id": "continue-dev",
+    "name": "Continue",
+    "url": "https://github.com/continuedev/continue",
+    "description": "Open-source AI code assistant that works inside your IDE.",
+    "category": "Developers",
+    "tags": ["ai", "coding", "ide", "assistant"]
+  },
+  {
+    "id": "tabby",
+    "name": "Tabby",
+    "url": "https://github.com/TabbyML/tabby",
+    "description": "Self-hosted AI coding assistant / autocomplete server.",
+    "category": "Developers",
+    "tags": ["ai", "coding", "self-hosted", "autocomplete"]
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "description": "Framework for building applications and agents powered by LLMs.",
+    "category": "Developers",
+    "tags": ["ai", "agents", "llm", "framework"]
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "url": "https://github.com/run-llama/llama_index",
+    "description": "Data framework for connecting LLMs to your documents and APIs.",
+    "category": "Developers",
+    "tags": ["ai", "rag", "llm", "data"]
+  },
+  {
+    "id": "stable-diffusion-webui",
+    "name": "Stable Diffusion WebUI",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "description": "Popular browser UI for running Stable Diffusion locally.",
+    "category": "Design",
+    "tags": ["ai", "images", "diffusion", "local"]
+  },
+  {
+    "id": "invokeai",
+    "name": "InvokeAI",
+    "url": "https://github.com/invoke-ai/InvokeAI",
+    "description": "Creative suite for Stable Diffusion with a focus on professional workflows.",
+    "category": "Design",
+    "tags": ["ai", "images", "diffusion", "creative"]
+  },
+  {
+    "id": "yt-dlp",
+    "name": "yt-dlp",
+    "url": "https://github.com/yt-dlp/yt-dlp",
+    "description": "Feature-rich command-line audio/video downloader.",
+    "category": "Everyday tools",
+    "tags": ["video", "download", "cli", "media"]
+  },
+  {
+    "id": "playwright",
+    "name": "Playwright",
+    "url": "https://github.com/microsoft/playwright",
+    "description": "Reliable end-to-end testing and browser automation for modern web apps.",
+    "category": "Developers",
+    "tags": ["testing", "browser", "automation", "e2e"]
+  },
+  {
+    "id": "hoppscotch",
+    "name": "Hoppscotch",
+    "url": "https://github.com/hoppscotch/hoppscotch",
+    "description": "Open-source API development ecosystem — a lightweight Postman alternative.",
+    "category": "Developers",
+    "tags": ["api", "http", "devtools", "testing"]
+  },
+  {
+    "id": "caddy",
+    "name": "Caddy",
+    "url": "https://github.com/caddyserver/caddy",
+    "description": "Powerful, extensible web server with automatic HTTPS by default.",
+    "category": "Developers",
+    "tags": ["web-server", "https", "proxy", "devops"]
+  },
+  {
+    "id": "ripgrep",
+    "name": "ripgrep",
+    "url": "https://github.com/BurntSushi/ripgrep",
+    "description": "Blazingly fast recursive search tool that respects your gitignore.",
+    "category": "Developers",
+    "tags": ["search", "cli", "rust", "devtools"]
+  },
+  {
+    "id": "fzf",
+    "name": "fzf",
+    "url": "https://github.com/junegunn/fzf",
+    "description": "Command-line fuzzy finder for files, history, processes, and more.",
+    "category": "Developers",
+    "tags": ["cli", "fuzzy-find", "productivity"]
+  },
+  {
+    "id": "lazygit",
+    "name": "lazygit",
+    "url": "https://github.com/jesseduffield/lazygit",
+    "description": "Simple terminal UI for git commands.",
+    "category": "Developers",
+    "tags": ["git", "cli", "tui", "devtools"]
+  },
+  {
+    "id": "it-tools",
+    "name": "IT Tools",
+    "url": "https://github.com/CorentinTh/it-tools",
+    "description": "Collection of handy online developer tools with great UX.",
+    "category": "Everyday tools",
+    "tags": ["devtools", "utilities", "web", "productivity"]
+  },
+  {
+    "id": "yazi",
+    "name": "Yazi",
+    "url": "https://github.com/sxyazi/yazi",
+    "description": "Blazing-fast terminal file manager written in Rust.",
+    "category": "Developers",
+    "tags": ["cli", "file-manager", "rust", "tui"]
+  },
+  {
+    "id": "msw",
+    "name": "Mock Service Worker",
+    "url": "https://github.com/mswjs/msw",
+    "description": "API mocking library for browser and Node using Service Workers.",
+    "category": "Developers",
+    "tags": ["testing", "mocking", "api", "javascript"]
+  },
+  {
+    "id": "pr-agent",
+    "name": "PR Agent",
+    "url": "https://github.com/The-PR-Agent/pr-agent",
+    "description": "Open-source AI pull request reviewer and improver.",
+    "category": "Developers",
+    "tags": ["ai", "code-review", "github", "devtools"]
+  },
+  {
+    "id": "surrealdb",
+    "name": "SurrealDB",
+    "url": "https://github.com/surrealdb/surrealdb",
+    "description": "Multi-model database for realtime collaborative apps.",
+    "category": "Developers",
+    "tags": ["database", "realtime", "backend"]
+  },
+  {
+    "id": "httpie",
+    "name": "HTTPie",
+    "url": "https://github.com/httpie/cli",
+    "description": "Human-friendly command-line HTTP client for APIs and debugging.",
+    "category": "Developers",
+    "tags": ["http", "cli", "api", "devtools"]
+  },
+  {
+    "id": "traefik",
+    "name": "Traefik",
+    "url": "https://github.com/traefik/traefik",
+    "description": "Cloud-native application proxy and reverse proxy / load balancer.",
+    "category": "Developers",
+    "tags": ["proxy", "devops", "kubernetes", "networking"]
+  },
+  {
+    "id": "restic",
+    "name": "restic",
+    "url": "https://github.com/restic/restic",
+    "description": "Fast, secure, efficient backup program.",
+    "category": "Everyday tools",
+    "tags": ["backup", "cli", "security", "self-hosted"]
+  },
+  {
+    "id": "neovim",
+    "name": "Neovim",
+    "url": "https://github.com/neovim/neovim",
+    "description": "Hyperextensible Vim-based text editor.",
+    "category": "Developers",
+    "tags": ["editor", "vim", "cli", "devtools"]
+  },
+  {
+    "id": "tmux",
+    "name": "tmux",
+    "url": "https://github.com/tmux/tmux",
+    "description": "Terminal multiplexer for sessions, windows, and panes.",
+    "category": "Developers",
+    "tags": ["terminal", "cli", "sessions"]
+  },
+  {
+    "id": "sherlock",
+    "name": "Sherlock",
+    "url": "https://github.com/sherlock-project/sherlock",
+    "description": "Hunt down social media accounts by username across many networks.",
+    "category": "Privacy",
+    "tags": ["osint", "cli", "investigation"]
+  },
+  {
+    "id": "penpot",
+    "name": "Penpot",
+    "url": "https://github.com/penpot/penpot",
+    "description": "Open-source design and prototyping platform — a Figma alternative.",
+    "category": "Design",
+    "tags": ["design", "prototyping", "ui", "self-hosted"]
+  },
+  {
+    "id": "affine",
+    "name": "AFFiNE",
+    "url": "https://github.com/toeverything/AFFiNE",
+    "description": "Open-source Notion + whiteboard-style workspace for notes and docs.",
+    "category": "Everyday tools",
+    "tags": ["notes", "docs", "productivity", "open-source"]
+  },
+  {
+    "id": "appflowy",
+    "name": "AppFlowy",
+    "url": "https://github.com/AppFlowy-IO/AppFlowy",
+    "description": "Open-source Notion alternative focused on privacy and local-first data.",
+    "category": "Everyday tools",
+    "tags": ["notes", "productivity", "privacy", "open-source"]
+  },
+  {
+    "id": "logseq",
+    "name": "Logseq",
+    "url": "https://github.com/logseq/logseq",
+    "description": "Privacy-first, open-source knowledge base with outline and graph views.",
+    "category": "Everyday tools",
+    "tags": ["notes", "knowledge", "privacy", "graph"]
   }
 ]
