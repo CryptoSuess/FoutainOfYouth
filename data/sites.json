@@ -774,5 +774,61 @@
     "description": "Autonomous agent that runs deep research on any topic using your choice of LLM providers.",
     "category": "Developers",
     "tags": ["ai", "research", "agents", "llm"]
+  },
+  {
+    "id": "mcp-for-blender",
+    "name": "MCP for Blender",
+    "url": "https://github.com/ahujasid/mcp-for-blender",
+    "description": "Community plugin to control Blender 3D with any LLM of your choice via MCP.",
+    "category": "Developers",
+    "tags": ["blender", "mcp", "3d", "ai"]
+  },
+  {
+    "id": "trellis-2",
+    "name": "TRELLIS.2",
+    "url": "https://github.com/microsoft/TRELLIS.2",
+    "description": "Microsoft research for native, compact structured latents for 3D generation.",
+    "category": "Developers",
+    "tags": ["3d", "ai", "generation", "microsoft"]
+  },
+  {
+    "id": "blender-skills",
+    "name": "Blender Skills",
+    "url": "https://github.com/EL4CTEO/blender-skills",
+    "description": "Professional Blender workflows as agent skills for modeling, UVs, PBR, rigging, and export.",
+    "category": "Developers",
+    "tags": ["blender", "skills", "3d", "agents"]
+  },
+  {
+    "id": "hunyuan3d-2-1",
+    "name": "Hunyuan3D 2.1",
+    "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+    "description": "Turn images into high-fidelity 3D assets with production-ready PBR materials.",
+    "category": "Design",
+    "tags": ["3d", "ai", "pbr", "tencent"]
+  },
+  {
+    "id": "unirig",
+    "name": "UniRig",
+    "url": "https://github.com/VAST-AI-Research/UniRig",
+    "description": "One model for diverse skeleton rigging across characters and creatures.",
+    "category": "Design",
+    "tags": ["3d", "rigging", "ai", "animation"]
+  },
+  {
+    "id": "dream-loop",
+    "name": "Dream Loop",
+    "url": "https://github.com/achimala/dream-loop",
+    "description": "Agent skill for impressive 3D visuals using Blender, image gen, and a critic subagent.",
+    "category": "Developers",
+    "tags": ["blender", "3d", "agents", "skills"]
+  },
+  {
+    "id": "graphify",
+    "name": "Graphify",
+    "url": "https://github.com/Graphify-Labs/graphify",
+    "description": "Turn a codebase, docs, schemas, and PDFs into a queryable knowledge graph for coding agents.",
+    "category": "Developers",
+    "tags": ["knowledge-graph", "agents", "codebase", "skills"]
   }
 ]
